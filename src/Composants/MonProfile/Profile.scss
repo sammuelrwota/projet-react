@@ -1,0 +1,63 @@
+.principal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+}
+.principal img {
+    border-radius: 50%; /* Applique le rayon pour arrondir les coins en cercle */
+    object-fit: cover; /* Permet de garder l'image bien cadrée dans le cercle */
+    margin-top : 100px;
+    margin-bottom: 20px;
+}
+
+.principal h1 {
+    text-align: center;
+    width: 70%;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.principal h1 span {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,85,121,1) 36%, rgba(1,21,234,1) 90%, rgba(0,212,255,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.principal p {
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.cv {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.connecte-avec-moi {
+    padding: 25px 45px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,85,121,1) 36%, rgba(1,21,234,1) 90%, rgba(0,212,255,1) 100%);
+    cursor: pointer;
+}
+
+.moncv {
+    padding: 25px 75px;
+    border-radius: 50px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.connecte-avec-moi:hover {
+    border: 2px solid white;
+}
+
+.moncv:hover {
+    border: 2px solid rgba(1,21,234,1);
+}

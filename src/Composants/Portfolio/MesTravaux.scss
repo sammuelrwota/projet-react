@@ -1,0 +1,78 @@
+.mestravaux {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.mestravaux-titre{
+    position: relative;
+}
+.mestravaux-titre h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+.mestravaux-titre img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.mestravaux-contenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+.mestravaux-contenu img {
+    box-sizing: border-box;
+    border: 2px solid rgb(78, 78, 252);
+    border-radius: 5px;
+    width: 300px;
+    height: 200px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.mestravaux-contenu img:hover {
+    transform: scale(1.10);
+    border: 4px solid blue;
+    border-radius: 10px;
+    transition: 0.3s
+}
+
+.montravail-montreplus {
+    display: flex;
+    gap: 20px;  /* Augmenter l'espacement entre le texte et l'image */
+    border-radius: 50px;
+    border: 2px solid white;
+    padding: 30px 60px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 80px;
+    transition: 0.6s;
+    cursor: pointer;
+
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none; /* Enlève le souligné des liens */
+        color: inherit; /* Hérite de la couleur du texte */
+    }
+    a:hover {
+        gap: 30px;
+        transition: 0.6s;
+    }
+}
+
+.montravail-montreplus img {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px; /* Ajoute un espacement à gauche de l'image (flèche) */
+}
+
+.montravail-montreplus:hover {
+    gap: 30px;
+    transition: 0.6s;
+}

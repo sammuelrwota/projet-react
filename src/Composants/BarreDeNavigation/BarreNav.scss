@@ -1,0 +1,51 @@
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 170px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+  
+    li {
+      position: relative;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: rgb(255, 255, 255);
+        transition: width 2s ease;
+      }
+  
+      &:hover {
+        cursor: pointer;
+  
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  .connect {
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,85,121,1) 36%, rgba(1,21,234,1) 90%, rgba(0,212,255,1) 100%);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
