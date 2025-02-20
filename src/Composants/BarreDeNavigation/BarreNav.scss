@@ -2,8 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 170px;
-  }
+    margin: 30px 100px;
+    & .divtest {
+      width: 75px;
+      height: 75pxpx;
+      animation: example 3s infinite; /* Apply animation */
+    }
+  }  
   
   .nav-menu {
     display: flex;
@@ -23,7 +28,7 @@
         width: 0%;
         height: 2px;
         background-color: rgb(255, 255, 255);
-        transition: width 2s ease;
+        transition: width 3s ease-in-out;
       }
   
       &:hover {
@@ -48,4 +53,27 @@
       transform: scale(1.05);
     }
   }
+
+  @keyframes example {
+    0%   {
+        filter: brightness(1);
+        filter: contrast(1);
+        -webkit-filter: brightness(1);
+        -webkit-filter: contrast(1);
+    }
+    50%  {
+        filter: brightness(0.4);
+        filter: contrast(0.4);
+        -webkit-filter: brightness(0.4);
+        -webkit-filter: contrast(0.4);
+    }
+    100% {
+        filter: brightness(1);
+        filter: contrast(1);
+        -webkit-filter: brightness(1);
+        -webkit-filter: contrast(1);
+    }
+}
+  
+
   

@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './ProposDeMoi.scss';
 
 function ProposDeMoi() {
+    useEffect(() => {
+        function faireApparaitre() {
+            let lesSectionsAfaireApparaitre = document.querySelectorAll(".apparition");
+            for (let uneSection of lesSectionsAfaireApparaitre) {
+                let hauteurVisible = window.innerHeight * 0.75;
+                let hauteurDeLaSection = uneSection.getBoundingClientRect().top;
+                if (hauteurDeLaSection < hauteurVisible) {
+                    uneSection.style.opacity = "1";
+                    uneSection.style.transform = "translateX(0%)";
+                } else {
+                    uneSection.style.opacity = "0";
+                    uneSection.style.transform = "translateX(-100%)";
+                }
+            }
+        }
+
+        window.addEventListener("scroll", faireApparaitre);
+        faireApparaitre(); // Vérifie au chargement initial
+
+        return () => {
+            window.removeEventListener("scroll", faireApparaitre);
+        };
+    }, []);
+
     return (
         <div className="AProposDeMoi">
             <div className="AProposDeMoi-titre">
@@ -10,7 +34,7 @@ function ProposDeMoi() {
             </div>
             <div className="sections-AProposDeMoi">
                 <div className="APropos-gauche">
-                <img src="/images/PhotoDeMoi.jpg" alt="Photo de l'étudiant" style={{ width: '150px', height: '150px' }} />
+                    <img src="/images/PhotoDeMoi.jpg" alt="Photo de l'étudiant" style={{ width: '150px', height: '150px' }} />
                 </div>
                 <div className="APropos-droit">
                     <div className="APropos-paragraphe">
@@ -18,15 +42,15 @@ function ProposDeMoi() {
                         <p>À la recherche d'emploi.</p>
                     </div>
                     <div className="APropos-mescompetences">
-                        <div className="APropos-competence"><p>HTML & CSS</p><hr style={{width:"80%"}}/></div>
-                        <div className="APropos-competence"><p>React JS</p><hr style={{width:"80%"}}/></div>
-                        <div className="APropos-competence"><p>Javascript</p><hr style={{width:"69%"}}/></div>
-                        <div className="APropos-competence"><p>SCSS</p><hr style={{width:"66%"}}/></div>
-                        <div className="APropos-competence"><p>PHP</p><hr style={{width:"75%"}}/></div>
-                        <div className="APropos-competence"><p>Figma</p><hr style={{width:"75%"}}/></div>
-                        <div className="APropos-competence"><p>Maya</p><hr style={{width:"55%"}}/></div>
-                        <div className="APropos-competence"><p>Github</p><hr style={{width:"90%"}}/></div>
-                        <div className="APropos-competence"><p>Wordpress</p><hr style={{width:"68%"}}/></div>
+                        <div className="APropos-competence apparition"><p>HTML & CSS</p><hr style={{width:"85%"}}/></div>
+                        <div className="APropos-competence apparition"><p>React JS</p><hr style={{width:"85%"}}/></div>
+                        <div className="APropos-competence apparition"><p>Javascript</p><hr style={{width:"70%"}}/></div>
+                        <div className="APropos-competence apparition"><p>SCSS</p><hr style={{width:"90%"}}/></div>
+                        <div className="APropos-competence apparition"><p>PHP</p><hr style={{width:"70%"}}/></div>
+                        <div className="APropos-competence apparition"><p>Figma</p><hr style={{width:"85%"}}/></div>
+                        <div className="APropos-competence apparition"><p>Maya</p><hr style={{width:"67%"}}/></div>
+                        <div className="APropos-competence apparition"><p>Github</p><hr style={{width:"90%"}}/></div>
+                        <div className="APropos-competence apparition"><p>Wordpress</p><hr style={{width:"70%"}}/></div>
                     </div>
                 </div>
             </div>

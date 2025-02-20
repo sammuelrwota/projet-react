@@ -17,23 +17,22 @@ function MesTravaux() {
                     <div key={index}>
                         <img 
                             src={travail.w_img} 
-                            alt={`Travail ${index + 1}`} 
-                            onError={() => console.log(`Erreur de chargement de l'image: ${travail.w_img}`)} 
+                            alt={`Travail ${index + 1}`}  // Corrigé ici
+                            onError={() => console.log(`Erreur de chargement de l'image: ${travail.w_img}`)}  // Corrigé ici
                         />
                     </div>
                 ))}
             </div>
             <div className="montravail-montreplus">
-    <a href="https://www.behance.net/profilsammuel" target="_blank" rel="noopener noreferrer">
-        <p>Voir Plus</p>
-        <img 
-            src={fleche_droite} 
-            alt="Fleche Droite" 
-            style={{ filter: "invert(50%) sepia(100%) saturate(500%) hue-rotate(200deg)" }} 
-        />
-    </a>
-</div>
-
+                <a href="https://www.behance.net/profilsammuel" target="_blank" rel="noopener noreferrer">
+                    <p>Voir Plus</p>
+                    <img 
+                        src={fleche_droite} 
+                        alt="Fleche Droite" 
+                        style={{ filter: "invert(50%) sepia(100%) saturate(500%) hue-rotate(200deg)" }} 
+                    />
+                </a>
+            </div>
         </div>
     );
 }

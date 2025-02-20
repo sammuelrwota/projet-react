@@ -1,0 +1,90 @@
+.ConnecteAvecMoi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+
+    .ConnecteAvecMoi_titre {
+        position: relative;
+
+        h1 {
+            padding: 0px 30px;
+            font-size: 60px;
+            font-weight: 600;
+        }
+    }
+
+    .ConnecteAvecMoi_section {
+        display: flex;
+        gap: 168px;
+    }
+
+    .medias {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 550px;
+        font-size: 20px;
+        line-height: 40px;
+
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .media {
+            p {
+                font-size: 20px;
+                font-weight: 700;
+                background: linear-gradient(90deg, rgb(93, 88, 204) 0%, rgba(9, 85, 121, 1) 36%, rgba(1, 21, 234, 1) 90%, rgba(0, 212, 255, 1) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    .liens a {
+        color: rgba(157, 164, 187, 0.458);
+        text-decoration: none;
+
+        &:hover {
+            color: rgba(93, 88, 204, 0.8); // You can adjust the hover color as needed
+        }
+    }
+
+    .apparition {
+        opacity: 0;
+        transform: translateX(-100%); // Cache l'élément à gauche
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+}
+
+.icones {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 40px;
+    margin-top: 100px;
+
+    .icone {
+        h3 {
+            display: flex;               // Alignement horizontal des éléments
+            align-items: center;         // Centrer l'icône et le texte verticalement
+            gap: 20px;                   // Espacement entre l'icône et le texte
+        }
+    }
+
+    a {
+        text-decoration: none; // Supprime le soulignement
+        color: inherit;        // Garder la couleur du texte héritée (cela évite que le lien prenne une couleur par défaut)
+    }
+
+    img {
+        vertical-align: middle; // Centrer verticalement l'icône
+    }
+}

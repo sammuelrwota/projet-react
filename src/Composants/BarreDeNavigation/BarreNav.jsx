@@ -6,13 +6,13 @@ function BarreNav({ setActivePage }) {
 
     return (
         <div className="navBar">
-            <img src={monlogo} alt="" style={{width: "50px", height: "50px"}} />
+            <img className="divtest" src={monlogo} alt="Mon Logo" style={{ width: "75px", height: "75px", cursor: "pointer" }} onClick={() => setActivePage('profile')} />
             <ul className="nav-menu">
                 <li onClick={() => setActivePage('about')}>À propos de moi</li>
                 <li onClick={() => setActivePage('portfolio')}>Portfolio</li>
                 <li onClick={() => setActivePage('contact')}>Contact</li>
             </ul>
-            <div className="connect">Connecte avec moi</div>
+            <div className="connect"onClick={() => setActivePage('connecte')}> Connecte avec moi</div>
         </div>
     );
 }

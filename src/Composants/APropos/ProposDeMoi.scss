@@ -5,93 +5,119 @@
     justify-content: center;
     gap: 80px;
     margin: 80px 170px;
-}
-.AProposDeMoi-titre {
-    position: relative;
-}
-.AProposDeMoi-titre h1 {
-    padding: 0px 30px;
-    font-size: 70px;
-    font-weight: 600;
-}
-.AProposDeMoi-titre img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-}
-.sections-AProposDeMoi {
-    display: flex;
-    gap: 80px;
-}
-.sections-AProposDeMoi img {
-    border-radius: 50%; /* Applique le rayon pour arrondir les coins en cercle */
-    object-fit: cover; /* Permet de garder l'image bien cadrée dans le cercle */
-}
-.APropos-droit {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-}
-.APropos-paragraphe {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 24px;
-    font-weight: 500;
-}
-.APropos-mescompetences {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.APropos-competence {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    transition: 0.3s;
-}
-.APropos-competence p{
-    min-width: 150px;
-    font-size: 24px;
-    font-weight: 500;
-}
-.APropos-competence hr {
-    outline: none;
-    border: none;
-    width: 50%;
-    height: 8px;
-    border-radius: 50px;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,85,121,1) 36%, rgba(1,21,234,1) 90%, rgba(0,212,255,1) 100%);
-}
-.accomplissements {
-    display: flex;
-    width: 100%; justify-content: space-around; margin-bottom: 80px;
-}
-.mon-accomplissement {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    transition: 0.5s;
-}
-.mon-accomplissement h1 {
-    font-size: 60px;
-    font-weight: 700;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,85,121,1) 36%, rgba(1,21,234,1) 90%, rgba(0,212,255,1) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;  
-}
-.mon-accomplissement p {
-    font-size: 22px;
-    font-weight: 500;
-}
-.APropos-competence:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-.accomplissements:hover {
-    transform: scale(1.12);
-    transition: 0.5s;
+
+    .AProposDeMoi-titre {
+        position: relative;
+
+        h1 {
+            padding: 0px 30px;
+            font-size: 60px;
+            font-weight: 600;
+        }
+
+        img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+    }
+
+    .sections-AProposDeMoi {
+        display: flex;
+        gap: 80px;
+
+        img {
+            border-radius: 50%;  // Applique le rayon pour arrondir les coins en cercle
+            object-fit: cover;  // Permet de garder l'image bien cadrée dans le cercle
+        }
+    }
+
+    .APropos-droit {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .APropos-paragraphe {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .APropos-mescompetences {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .APropos-competence {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        transition: 0.3s;
+
+        p {
+            min-width: 150px;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        hr {
+            outline: none;
+            border: none;
+            width: 50%;
+            height: 8px;
+            border-radius: 50px;
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 85, 121, 1) 36%, rgba(1, 21, 234, 1) 90%, rgba(0, 212, 255, 1) 100%);
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+    }
+
+    .accomplissements {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 80px;
+
+        &:hover {
+            transform: scale(1.12);
+            transition: 0.5s;
+        }
+
+        .mon-accomplissement {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            transition: 0.5s;
+
+            h1 {
+                font-size: 60px;
+                font-weight: 700;
+                background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 85, 121, 1) 36%, rgba(1, 21, 234, 1) 90%, rgba(0, 212, 255, 1) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            p {
+                font-size: 22px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    // Effet apparition
+    .apparition {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: opacity 2s ease, transform 2s ease;
+    }
 }

@@ -27,7 +27,7 @@ function Footer() {
             <hr style={{ width: "100%", margin: "0", border: "none", height: "2px", backgroundColor: "white" }} />
             <div className="footer-bottom">
                 <p className="footer-bottom-left">
-                © 2025 Sammuel Rwota.Tous droits réservés.
+                © 2025 Sammuel Rwota. Tous droits réservés.
                 </p>
                 <div className="bottom-droite">
                     <p>Conditions de service</p>
