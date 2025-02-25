@@ -65,6 +65,27 @@
             font-weight: 500;
         }
 
+        .figmaClick {
+            cursor: pointer;
+            position: relative; /* Nécessaire pour positionner le soulignement */
+        
+            &:hover {
+                text-decoration: none; /* Supprime le soulignement par défaut */
+            }
+        
+            &:hover::after {
+                content: ""; /* Crée un pseudo-élément */
+                position: absolute;
+                bottom: -5px; /* Position du soulignement en dessous du texte */
+                left: 0;
+                width: 45%;
+                height: 2px; /* Épaisseur du soulignement */
+                background-color: #ffffff; /* Couleur du soulignement */
+                transition: width 0.3s ease; /* Transition fluide */
+            }
+        }        
+
+
         hr {
             outline: none;
             border: none;
@@ -120,4 +141,12 @@
         transform: translateX(-100%);
         transition: opacity 2s ease, transform 2s ease;
     }
+
+    // Classe pour animer l'affichage du composant Figma
+    .showCompetenceFigma {
+        transform: translate(-50%, -50%) translateY(-210px) translateX(165px); /* Ajustez la position selon l'effet désiré */
+        z-index: 1; /* Affiche le composant au-dessus */
+        transition: transform 0.5s ease, z-index 0s; /* Transition lisse pour le mouvement */
+    }
+    
 }

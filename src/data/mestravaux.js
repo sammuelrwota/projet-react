@@ -1,5 +1,3 @@
-
-
 const mestravaux_data = [
   {
     w_no: 1,
