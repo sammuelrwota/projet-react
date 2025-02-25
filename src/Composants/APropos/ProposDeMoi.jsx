@@ -64,46 +64,54 @@ function ProposDeMoi() {
                     </div>
                     <div className="APropos-mescompetences">
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("HtmlCss")}>
-                            <p>HTML & CSS</p>
+                            <p className="underlineClick">HTML & CSS</p>
                             <hr style={{ width: "85%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("ReactJs")}>
-                            <p>React JS</p>
+                            <p className="underlineClick">React JS</p>
                             <hr style={{ width: "85%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Javascript")}>
-                            <p>Javascript</p>
+                            <p className="underlineClick">Javascript</p>
                             <hr style={{ width: "70%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Scss")}>
-                            <p>SCSS</p>
+                             <p className="underlineClick">SCSS</p>
                             <hr style={{ width: "90%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Php")}>
-                            <p>PHP</p>
+                            <p className="underlineClick">PHP</p>
                             <hr style={{ width: "70%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Figma")}>
-                            <p className="figmaClick">Figma</p>
+                            <p className="underlineClick">Figma</p>
                             <hr style={{ width: "85%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Maya")}>
-                            <p>Maya</p>
+                             <p className="underlineClick">Maya</p>
                             <hr style={{ width: "67%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Github")}>
-                            <p>Github</p>
+                            <p className="underlineClick">Github</p>
                             <hr style={{ width: "90%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Wordpress")}>
-                            <p>Wordpress</p>
+                            <p className="underlineClick">Wordpress</p>
                             <hr style={{ width: "70%" }} />
                         </div>
                     </div>
                 </div>
             </div>
             {/* 🔥 Affichage dynamique du composant sélectionné */}
-            <div className={`competence-detail ${competenceActive === "Figma" ? "showCompetenceFigma" : ""}`}>
+            <div className={`competence-detail ${competenceActive === "Figma" ? "showCompetenceFigma" :
+                competenceActive === "HtmlCss" ? "showCompetenceHtmlCss" :
+                competenceActive === "ReactJs" ? "showCompetenceReactJs" :
+                competenceActive === "Javascript" ? "showCompetenceJavascript" :
+                competenceActive === "Scss" ? "showCompetenceScss" :
+                competenceActive === "Php" ? "showCompetencePhp" :
+                competenceActive === "Maya" ? "showCompetenceMaya" :
+                competenceActive === "Github" ? "showCompetenceGithub" :
+                competenceActive === "Wordpress" ? "showCompetenceWordpress" : ""}`}>
                 {competenceActive === "Figma" && <Figma />}
                 {competenceActive === "HtmlCss" && <HtmlCss />}
                 {competenceActive === "ReactJs" && <ReactJs />}
@@ -114,6 +122,7 @@ function ProposDeMoi() {
                 {competenceActive === "Github" && <Github />}
                 {competenceActive === "Wordpress" && <Wordpress />}
             </div>
+
 
             <div className="accomplissements">
                 <div className="mon-accomplissement">

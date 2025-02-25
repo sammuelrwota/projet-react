@@ -65,7 +65,7 @@
             font-weight: 500;
         }
 
-        .figmaClick {
+        .underlineClick {
             cursor: pointer;
             position: relative; /* Nécessaire pour positionner le soulignement */
         
@@ -78,9 +78,9 @@
                 position: absolute;
                 bottom: -5px; /* Position du soulignement en dessous du texte */
                 left: 0;
-                width: 45%;
+                width: 50%;
                 height: 2px; /* Épaisseur du soulignement */
-                background-color: #ffffff; /* Couleur du soulignement */
+                background-color: #4e4e4e; /* Couleur du soulignement */
                 transition: width 0.3s ease; /* Transition fluide */
             }
         }        
@@ -143,7 +143,17 @@
     }
 
     // Classe pour animer l'affichage du composant Figma
-    .showCompetenceFigma {
+
+
+    .showCompetenceFigma,
+    .showCompetenceHtmlCss,
+    .showCompetenceReactJs,
+    .showCompetenceJavascript,
+    .showCompetenceScss,
+    .showCompetencePhp,
+    .showCompetenceMaya,
+    .showCompetenceGithub,
+    .showCompetenceWordpress {
         transform: translate(-50%, -50%) translateY(-250px) translateX(250px); /* Ajustez la position selon l'effet désiré */
         z-index: 1; /* Affiche le composant au-dessus */
         transition: transform 0.5s ease, z-index 0s; /* Transition lisse pour le mouvement */
