@@ -1,5 +1,14 @@
 import React, { useEffect } from "react";
 import './ProposDeMoi.scss';
+import Figma from "../Notions/Figma";
+import Github from "../Notions/Github";
+import HtmlCss from "../Notions/HtmlCss";
+import Javascript from "../Notions/Javascipt"
+import Maya from "../Notions/Maya";
+import Php from "../Notions/Php";
+import ReactJs from "../Notions/ReactJs";
+import Scss from "../Notions/Scss";
+import Wordpress from "../Notions/Wordpress";
 
 function ProposDeMoi() {
     useEffect(() => {
@@ -43,14 +52,23 @@ function ProposDeMoi() {
                     </div>
                     <div className="APropos-mescompetences">
                         <div className="APropos-competence apparition"><p>HTML & CSS</p><hr style={{width:"85%"}}/></div>
+                        <HtmlCss /> {/* Ajout de HtmlCss */}
                         <div className="APropos-competence apparition"><p>React JS</p><hr style={{width:"85%"}}/></div>
+                        <ReactJs />
                         <div className="APropos-competence apparition"><p>Javascript</p><hr style={{width:"70%"}}/></div>
+                        <Javascript />
                         <div className="APropos-competence apparition"><p>SCSS</p><hr style={{width:"90%"}}/></div>
+                        <Scss />
                         <div className="APropos-competence apparition"><p>PHP</p><hr style={{width:"70%"}}/></div>
+                        <Php />
                         <div className="APropos-competence apparition"><p>Figma</p><hr style={{width:"85%"}}/></div>
+                        <Figma />
                         <div className="APropos-competence apparition"><p>Maya</p><hr style={{width:"67%"}}/></div>
+                        <Maya />
                         <div className="APropos-competence apparition"><p>Github</p><hr style={{width:"90%"}}/></div>
+                        <Github />
                         <div className="APropos-competence apparition"><p>Wordpress</p><hr style={{width:"70%"}}/></div>
+                        <Wordpress />
                     </div>
                 </div>
             </div>
