@@ -8,7 +8,6 @@ function Github() {
             <h1>Github</h1>
             <div className='paragrapheGithub'>
                 <p className='pGithub'>  
-
                 </p>
             </div>
         </div>

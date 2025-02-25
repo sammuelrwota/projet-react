@@ -3,12 +3,11 @@ import ProposDeMoi from '../APropos/ProposDeMoi';
 
 function HtmlCss() {
     return(
-        <div className='CompetenceGithub'>
-        <div className='GithubTitre'>
-            <h1>Github</h1>
-            <div className='paragrapheGithub'>
-                <p className='pGitub'>  
-                
+        <div className='CompetenceHtmlCss'>
+        <div className='HtmlCssTitre'>
+            <h1>HtmlCss</h1>
+            <div className='paragrapheHtmlCss'>
+                <p className='pHtmlCss'>  
                 </p>
             </div>
         </div>
