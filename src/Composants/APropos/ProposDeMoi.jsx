@@ -55,7 +55,7 @@ function ProposDeMoi() {
             </div>
             <div className="sections-AProposDeMoi">
                 <div className="APropos-gauche">
-                    <img src="/images/PhotoDeMoi.jpg" alt="Photo de l'étudiant" style={{ width: '150px', height: '150px' }} />
+                    <img src="images/PhotoDeMoi.jpg" alt="Photo de l'étudiant" style={{ width: '150px', height: '150px' }} />
                 </div>
                 <div className="APropos-droit">
                     <div className="APropos-paragraphe">
