@@ -5,9 +5,11 @@
   "homepage": "https://sammuelrwota.github.io/projet-react",
   "type": "module",
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d dist",
+    "preghp": "npm run build",
+    "ghp": "gh-pages -d dist",
+    "lint": "eslint .",
     "preview": "vite preview --port 8080"
   },
   "dependencies": {
