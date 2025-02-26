@@ -6,7 +6,7 @@ function Profile({ setActivePage }) {
         <div className="principal">
             <img src="images/PhotoDeMoi.jpg" alt="Photo de l'étudiant" style={{ width: '150px', height: '150px' }} />
             <h1><span>Je suis Sammuel Rwota </span>étudiant à Maisonneuve.</h1>
-            <p>En recherche d'emploi d'été.</p>
+            <p>En recherche de stage d'été.</p>
             <div className="cv">
                 <div className="connecte-avec-moi" onClick={() => setActivePage('connecte')}>Connecte avec moi</div>
                 <div className="moncv">Mon CV</div>

@@ -3,7 +3,15 @@ import ProposDeMoi from '../APropos/ProposDeMoi';
 
 function Javascript() {
     return(
-        <div></div>
+        <div className='CompetenceJavascript'>
+        <div className='JavascriptTitre'>
+            <h1>Javascript</h1>
+            <div className='paragrapheJavascript'>
+                <p className='pJavascript'>  
+                </p>
+            </div>
+        </div>
+        </div>
     )
 }
 

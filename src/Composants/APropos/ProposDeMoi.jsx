@@ -8,7 +8,7 @@ import Maya from "../Notions/Maya";
 import Php from "../Notions/Php";
 import ReactJs from "../Notions/ReactJs";
 import Scss from "../Notions/Scss";
-import Wordpress from "../Notions/Wordpress";
+import Wp from "../Notions/Wp";
 
 function ProposDeMoi() {
     const [competenceActive, setCompetenceActive] = useState(null);
@@ -95,7 +95,7 @@ function ProposDeMoi() {
                             <p className="underlineClick">Github</p>
                             <hr style={{ width: "90%" }} />
                         </div>
-                        <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Wordpress")}>
+                        <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Wp")}>
                             <p className="underlineClick">Wordpress</p>
                             <hr style={{ width: "70%" }} />
                         </div>
@@ -111,7 +111,7 @@ function ProposDeMoi() {
                 competenceActive === "Php" ? "showCompetencePhp" :
                 competenceActive === "Maya" ? "showCompetenceMaya" :
                 competenceActive === "Github" ? "showCompetenceGithub" :
-                competenceActive === "Wordpress" ? "showCompetenceWordpress" : ""}`}>
+                competenceActive === "Wp" ? "showCompetenceWp" : ""}`}>
                 {competenceActive === "Figma" && <Figma />}
                 {competenceActive === "HtmlCss" && <HtmlCss />}
                 {competenceActive === "ReactJs" && <ReactJs />}
@@ -120,7 +120,7 @@ function ProposDeMoi() {
                 {competenceActive === "Php" && <Php />}
                 {competenceActive === "Maya" && <Maya />}
                 {competenceActive === "Github" && <Github />}
-                {competenceActive === "Wordpress" && <Wordpress />}
+                {competenceActive === "Wp" && <Wp />}
             </div>
 
 
