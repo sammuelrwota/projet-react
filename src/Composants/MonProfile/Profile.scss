@@ -4,6 +4,22 @@
     flex-direction: column;
     gap: 35px;
 
+    .spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid rgba(0, 0, 0, 0.1);
+        border-top-color: #007bff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-top: 100px;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+
     & .photoDeMoi_img {
         border-radius: 50%;
         object-fit: cover;
