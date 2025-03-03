@@ -22,12 +22,12 @@ const mestravaux_data = [
   {
   w_no: 5,
   w_name: "Web",
-  w_img: "images/image4.png"
+  w_img: "images/image5.png"
   },
   {
     w_no: 6,
     w_name: "Web",
-    w_img: "images/image4.png"
+    w_img: "images/image6.png"
     }
 
   
