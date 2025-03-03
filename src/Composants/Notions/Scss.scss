@@ -33,3 +33,9 @@
     line-height: 2;
     color: black;
 }
+@media(max-width:768px) {
+    .CompetenceScss {
+        display: none;
+    }
+    
+}

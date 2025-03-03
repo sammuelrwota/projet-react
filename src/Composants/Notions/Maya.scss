@@ -33,3 +33,10 @@
     line-height: 2;
     color: black;
 }
+
+@media(max-width:768px) {
+    .CompetenceMaya {
+        display: none;
+    }
+    
+}
