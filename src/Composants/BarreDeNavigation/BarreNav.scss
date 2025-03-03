@@ -82,7 +82,7 @@
 
   .react-tooltip-container {
     position: relative;
-    display: inline-block;
+    display: inline-block; 
   }
 
   .tooltip {
@@ -99,6 +99,7 @@
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
+   
   }
 
   .react-tooltip-container:hover .tooltip {

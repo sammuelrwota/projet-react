@@ -69,6 +69,7 @@
         display: flex;
         justify-content: space-between;
         font-size: 18px;
+        margin-bottom: 10px;
 
         .footer-bottom-left,
         .bottom-droite p {
@@ -88,15 +89,22 @@
 }
 @media(max-width:768px) {
     .footer {
-        margin: 50px 1px;
+        margin: 40px 1px !important;
     }
     .footer-top {
         flex-direction: column;
-        gap: 50px;
+        gap: 0px !important;
     }
     .footer-bottom {
         display: flex;
         flex-direction: column-reverse;
-        margin-bottom: 50px;
+        margin-bottom: 0px !important;
     }
+    .footer-top-gauche {
+        margin: 35px !important;
+        font-size: 16px;
+        max-width: 700px !important;
+        line-height: 20px;
+    }
+
 }
