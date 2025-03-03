@@ -59,30 +59,32 @@
     }
   }
 
-  @keyframes example {
+  @keyframes brillanceEtRotation {
     0% {
-      filter: brightness(1);
-      filter: contrast(1);
-      -webkit-filter: brightness(1);
-      -webkit-filter: contrast(1);
+      transform: rotate(0deg);
+      box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
     }
     50% {
-      filter: brightness(0.4);
-      filter: contrast(0.4);
-      -webkit-filter: brightness(0.4);
-      -webkit-filter: contrast(0.4);
+      transform: rotate(180deg);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 1);
     }
     100% {
-      filter: brightness(1);
-      filter: contrast(1);
-      -webkit-filter: brightness(1);
-      -webkit-filter: contrast(1);
+      transform: rotate(360deg);
+      box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
     }
   }
 
   .react-tooltip-container {
     position: relative;
-    display: inline-block; 
+    display: inline-block;
+  }
+
+  .logoReact {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .react-tooltip-container:hover .logoReact {
+    animation: brillanceEtRotation 2s linear infinite;
   }
 
   .tooltip {
@@ -99,12 +101,12 @@
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
-   
   }
 
   .react-tooltip-container:hover .tooltip {
     opacity: 1;
   }
+
 
   @media (max-width: 768px) {
     .navBar {
