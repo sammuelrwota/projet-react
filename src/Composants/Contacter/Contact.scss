@@ -133,3 +133,50 @@
         transition: opacity 0.5s ease, transform 0.5s ease;
     }
 }
+
+
+@media(max-width:768px) {
+    .Contact {
+        gap: 50px;
+        margin: 50px 70px;
+        align-items: start;
+
+
+    }   
+         .contact-titre  h1{
+            padding: 0;
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+    .section-contacter {
+        flex-direction: column;   
+    }
+
+    .contact-gauche h1 {
+        font-size: 30px;
+    }
+
+    .contact-gauche p {
+        font-size: 18px;
+    }
+
+    .contact-detail {
+        gap: 20px;
+    }
+    .contact-droite label {
+        font-size: 16px !important;
+    }
+    .contact-droite input {
+        width: 100%;
+        font-size: 16px !important;
+    }
+    .contact-droite textarea {
+        width: 95%;
+        font-size: 16px !important;
+    }
+    .Contact-Envoyez {
+        font-size: 18px !important;
+        padding: 15px 30px;
+    }
+}

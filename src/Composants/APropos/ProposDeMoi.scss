@@ -167,3 +167,55 @@
     }
     
 }
+
+@media(max-width:768px) {
+    .AProposDeMoi {
+        gap: 80px;
+        margin: 50px 70px;
+        align-items: start;
+    }
+    .AProposDeMoi-titre h1 {
+        font-size: 30px;
+        padding: 0;
+    }
+    .sections-AProposDeMoi {
+        flex-direction: column;
+    }
+    .APropos-gauche {
+        display: none;
+    }
+    .APropos-paragraphe {
+        font-size: 18px;
+        line-height: 32px;
+    }
+    .APropos-competence {
+        gap: 20px;
+        align-items: center;
+
+        & p {
+            font-size: 18px;
+        }
+
+        & hr {
+            height: 4px;
+        }
+    }
+
+    .accomplissements {
+        justify-content: space-between;
+
+        & .mon-accomplissement {
+            gap: 10px;
+            & .hr {
+            font-size: 24px;
+            font-weight: 700;        
+            }
+            & p{
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+
+
+}

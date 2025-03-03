@@ -88,3 +88,39 @@
         vertical-align: middle; // Centrer verticalement l'icône
     }
 }
+
+  
+    @media (max-width: 768px) {
+
+        .ConnecteAvecMoi_titre h1 {
+            font-size: 50px !important;
+
+        }
+      .ConnecteAvecMoi_section {
+        gap: 30px !important;
+
+        .medias, .icones {
+          gap: 15px; /* Réduit l'écart entre les éléments sur mobile */
+        }
+  
+        .media, .icone {
+          display: flex;
+          flex-direction: column; /* Aligne les éléments en colonne sur mobile */
+          align-items: flex-start;
+          gap: 10px;
+        }
+
+        .media {
+            font-size: 16px;
+        }
+  
+        /* Assurez-vous que les icônes et les liens sont bien alignés et visibles */
+        .icone h3 {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+  
+  
