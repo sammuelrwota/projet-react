@@ -92,6 +92,10 @@
   
     @media (max-width: 768px) {
 
+        .ConnecteAvecMoi {
+            margin: 80px 70px;
+        }
+
         .ConnecteAvecMoi_titre h1 {
             font-size: 50px !important;
 
@@ -99,8 +103,8 @@
       .ConnecteAvecMoi_section {
         gap: 30px !important;
 
-        .medias, .icones {
-          gap: 15px; /* Réduit l'écart entre les éléments sur mobile */
+        .medias{
+          gap: 30px; /* Réduit l'écart entre les éléments sur mobile */
         }
   
         .media, .icone {
