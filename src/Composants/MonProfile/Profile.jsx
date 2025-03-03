@@ -5,7 +5,6 @@ import Maisonneuvelogo from '../../assets/logo-maisonneuve.jpg';
 
 function Profile({ setActivePage }) {
     const handleCVClick = () => {
-        // Redirect to the Google Drive PDF view link
         window.location.href = "https://drive.google.com/uc?export=view&id=1-hE-N1nc1upYHkCXXM0RbZrkSlot-x5c"; 
     };
 
@@ -14,11 +13,9 @@ function Profile({ setActivePage }) {
             <img className="photoDeMoi_img" src="images/PhotoDeMoi.jpg" alt="Photo de l'étudiant" style={{ width: '150px', height: '150px' }} />
 
             <div className="lesImages">
-                {/* Logo TIM - lien vers le programme */}
                 <a href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/" target="_blank" rel="noopener noreferrer" className="logo-link">
                     <img className="timlogo_img" src={timlogo} alt="Logo TIM Maisonneuve" style={{ width: "50px", height: "50px" }} />
                 </a>
-                {/* Logo Maisonneuve - lien vers le site web principal */}
                 <a href="https://www.cmaisonneuve.qc.ca/" target="_blank" rel="noopener noreferrer" className="logo-link">
                     <img className="maisonneuve_img" src={Maisonneuvelogo} alt="Logo Maisonneuve" style={{ width: "150px", height: "50px" }} />
                 </a>

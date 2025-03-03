@@ -32,7 +32,7 @@ function ProposDeMoi() {
         }
 
         window.addEventListener("scroll", faireApparaitre);
-        faireApparaitre(); // Vérifie au chargement initial
+        faireApparaitre(); 
 
         return () => {
             window.removeEventListener("scroll", faireApparaitre);
@@ -41,10 +41,10 @@ function ProposDeMoi() {
 
     const handleCompetenceClick = (competence) => {
         if (competenceActive === competence) {
-            // Si la compétence est déjà active, la désactiver
+        
             setCompetenceActive(null);
         } else {
-            // Sinon, l'activer
+          
             setCompetenceActive(competence);
         }
     };
@@ -113,7 +113,6 @@ function ProposDeMoi() {
                     </div>
                 </div>
             </div>
-            {/* 🔥 Affichage dynamique du composant sélectionné */}
             <div className={`competence-detail ${competenceActive === "Figma" ? "showCompetenceFigma" :
                 competenceActive === "HtmlCss" ? "showCompetenceHtmlCss" :
                 competenceActive === "ReactJs" ? "showCompetenceReactJs" :

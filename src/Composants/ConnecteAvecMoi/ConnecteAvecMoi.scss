@@ -51,13 +51,13 @@
         text-decoration: none;
 
         &:hover {
-            color: rgba(93, 88, 204, 0.8); // You can adjust the hover color as needed
+            color: rgba(93, 88, 204, 0.8);
         }
     }
 
     .apparition {
         opacity: 0;
-        transform: translateX(-100%); // Cache l'élément à gauche
+        transform: translateX(-100%);
         transition: opacity 0.5s ease, transform 0.5s ease;
     }
 }
@@ -73,58 +73,54 @@
 
     .icone {
         h3 {
-            display: flex;               // Alignement horizontal des éléments
-            align-items: center;         // Centrer l'icône et le texte verticalement
-            gap: 20px;                   // Espacement entre l'icône et le texte
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
     }
 
     a {
-        text-decoration: none; // Supprime le soulignement
-        color: inherit;        // Garder la couleur du texte héritée (cela évite que le lien prenne une couleur par défaut)
+        text-decoration: none;
+        color: inherit;
     }
 
     img {
-        vertical-align: middle; // Centrer verticalement l'icône
+        vertical-align: middle;
     }
 }
 
-  
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
 
-        .ConnecteAvecMoi {
-            margin: 80px 70px;
-        }
+    .ConnecteAvecMoi {
+        margin: 80px 70px;
+    }
 
-        .ConnecteAvecMoi_titre h1 {
-            font-size: 50px !important;
+    .ConnecteAvecMoi_titre h1 {
+        font-size: 50px !important;
+    }
 
-        }
-      .ConnecteAvecMoi_section {
+    .ConnecteAvecMoi_section {
         gap: 30px !important;
 
-        .medias{
-          gap: 30px; /* Réduit l'écart entre les éléments sur mobile */
+        .medias {
+            gap: 30px;
         }
-  
+
         .media, .icone {
-          display: flex;
-          flex-direction: column; /* Aligne les éléments en colonne sur mobile */
-          align-items: flex-start;
-          gap: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
         }
 
         .media {
             font-size: 16px;
         }
-  
-        /* Assurez-vous que les icônes et les liens sont bien alignés et visibles */
+
         .icone h3 {
-          display: flex;
-          align-items: center;
-          gap: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-      }
     }
-  
-  
+}

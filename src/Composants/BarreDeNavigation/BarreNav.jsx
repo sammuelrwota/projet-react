@@ -5,7 +5,6 @@ import menuicon from '../../assets/menuicon.png'
 import menuiconclose from '../../assets/menuicon-close.png'
 
 function BarreNav({ setActivePage }) {
-    // Move useRef inside the functional component
     const menuRef = useRef();
 
     const openMenu = () => {

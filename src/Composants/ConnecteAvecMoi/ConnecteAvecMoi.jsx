@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import './ConnecteAvecMoi.scss';
 import logo_linkedin from '../../assets/logo_reseaux/linkedin.svg';
-import logo_github from '../../assets/logo_reseaux/github.svg'
+import logo_github from '../../assets/logo_reseaux/github.svg';
 import logo_behance from '../../assets/logo_reseaux/behance.svg';
 
 function ConnecteAvecMoi() {
     useEffect(() => {
-        // Fonction pour faire apparaître les éléments avec l'effet de défilement
         function faireApparaitre() {
             let lesSectionsAfaireApparaitre = document.querySelectorAll(".apparition");
             for (let uneSection of lesSectionsAfaireApparaitre) {
@@ -14,25 +13,21 @@ function ConnecteAvecMoi() {
                 let hauteurDeLaSection = uneSection.getBoundingClientRect().top;
                 if (hauteurDeLaSection < hauteurVisible) {
                     uneSection.style.opacity = "1";
-                    uneSection.style.transform = "translateX(0%)"; // Animation vers la position d'origine
+                    uneSection.style.transform = "translateX(0%)";
                 } else {
                     uneSection.style.opacity = "0";
-                    uneSection.style.transform = "translateX(-100%)"; // Cache l'élément à gauche
+                    uneSection.style.transform = "translateX(-100%)";
                 }
             }
         }
 
-        // Attacher l'événement de scroll
         window.addEventListener("scroll", faireApparaitre);
-
-        // Vérifier au chargement initial
         faireApparaitre();
 
-        // Nettoyer l'événement lors du démontage du composant
         return () => {
             window.removeEventListener("scroll", faireApparaitre);
         };
-    }, []); // [] pour ne s'exécuter qu'une seule fois au montage du composant
+    }, []);
 
     return (
         <div className="ConnecteAvecMoi">

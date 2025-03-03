@@ -12,14 +12,12 @@ function Footer() {
                 </div>
                 <div className="footer-top-droite">
                     <div className="footer-email-input">
-                    <img 
-  src={user_icon} 
-  alt="" 
-  style={{ width: "25px", height: "25px", filter: "invert(50%) sepia(100%) saturate(500%) hue-rotate(200deg)" }} 
-/>
-
-
-                        <input type="email" placeholder="Insérez votre e-mail." />
+                        <img 
+                            src={user_icon} 
+                            alt="" 
+                            style={{ width: "25px", height: "25px", filter: "invert(50%) sepia(100%) saturate(500%) hue-rotate(200deg)" }} 
+                        />
+                    <input type="email" placeholder="Insérez votre e-mail." />
                     </div>
                     <div className="footer-subscribe">S'abonner</div>
                 </div>

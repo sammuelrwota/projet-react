@@ -9,7 +9,7 @@ import Footer from './Composants/Footer/Footer.jsx';
 import ConnecteAvecMoi from './Composants/ConnecteAvecMoi/ConnecteAvecMoi.jsx';
 
 function Appli() {
-  const [activePage, setActivePage] = useState('profile'); // Gérer la page active
+  const [activePage, setActivePage] = useState('profile'); 
 
   const handleSetActivePage = (page) => {
     console.log(`Composant cliqué: ${page}`);
@@ -35,8 +35,8 @@ function Appli() {
 
   return (
     <div>
-        <BarreNav setActivePage={handleSetActivePage}/> {/* Passer la fonction pour changer de page */}
-        {renderPage()} {/* Afficher la page active */}
+        <BarreNav setActivePage={handleSetActivePage}/> 
+        {renderPage()}
         <Footer />
     </div>
   );

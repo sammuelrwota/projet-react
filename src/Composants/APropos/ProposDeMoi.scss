@@ -28,8 +28,8 @@
         gap: 80px;
 
         img {
-            border-radius: 50%;  // Applique le rayon pour arrondir les coins en cercle
-            object-fit: cover;  // Permet de garder l'image bien cadrée dans le cercle
+            border-radius: 50%;  
+            object-fit: cover; 
         }
     }
 
@@ -72,21 +72,21 @@
 
         .underlineClick {
             cursor: pointer;
-            position: relative; /* Nécessaire pour positionner le soulignement */
+            position: relative; 
         
             &:hover {
-                text-decoration: none; /* Supprime le soulignement par défaut */
+                text-decoration: none; 
             }
         
             &:hover::after {
-                content: ""; /* Crée un pseudo-élément */
+                content: ""; 
                 position: absolute;
-                bottom: -5px; /* Position du soulignement en dessous du texte */
+                bottom: -5px; 
                 left: 0;
                 width: 50%;
-                height: 2px; /* Épaisseur du soulignement */
-                background-color: #4e4e4e; /* Couleur du soulignement */
-                transition: width 0.3s ease; /* Transition fluide */
+                height: 2px; 
+                background-color: #4e4e4e; 
+                transition: width 0.3s ease;
             }
         }        
 
@@ -147,7 +147,7 @@
         transition: opacity 2s ease, transform 2s ease;
     }
 
-    // Classe pour animer l'affichage du composant Figma
+
 
 
     .showCompetenceFigma,
@@ -161,9 +161,9 @@
     .showCompetenceWp,
     .showCompetenceUnity,
     .showCompetenceAdobe {
-        transform: translate(-50%, -50%) translateY(-325px) translateX(200px); /* Ajustez la position selon l'effet désiré */
-        z-index: 1; /* Affiche le composant au-dessus */
-        transition: transform 0.5s ease, z-index 0s; /* Transition lisse pour le mouvement */
+        transform: translate(-50%, -50%) translateY(-325px) translateX(200px);
+        z-index: 1; 
+        transition: transform 0.5s ease, z-index 0s; 
     }
     
 }

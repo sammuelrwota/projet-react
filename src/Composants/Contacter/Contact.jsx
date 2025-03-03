@@ -6,10 +6,9 @@ import phone_icon from '../../assets/phone_icon.svg'
 
 function Contact() {
 
-    // Fonction pour faire apparaître les sections au défilement
     const faireApparaitre = () => {
         const lesSectionsAfaireApparaitre = document.querySelectorAll(".apparition");
-        const hauteurVisible = window.innerHeight * 0.75; // 75% de la hauteur de la fenêtre
+        const hauteurVisible = window.innerHeight * 0.75;
 
         lesSectionsAfaireApparaitre.forEach(uneSection => {
             const hauteurDeLaSection = uneSection.getBoundingClientRect().top;
@@ -23,14 +22,11 @@ function Contact() {
         });
     };
 
-    // Ajouter l'écouteur d'événement scroll au moment où le composant est monté
     useEffect(() => {
         window.addEventListener("scroll", faireApparaitre);
 
-        // Appeler la fonction de départ au chargement de la page
         faireApparaitre();
 
-        // Nettoyage au démontage du composant
         return () => {
             window.removeEventListener("scroll", faireApparaitre);
         };

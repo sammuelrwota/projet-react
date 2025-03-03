@@ -1,4 +1,3 @@
-// Composants/Accueil/Accueil.jsx
 import React from 'react';
 
 function Accueil() {

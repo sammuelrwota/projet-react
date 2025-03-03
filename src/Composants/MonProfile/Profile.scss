@@ -13,9 +13,9 @@
 
     & .lesImages {
         display: flex;
-        flex-direction: row; /* Aligne les logos horizontalement */
+        flex-direction: row; 
         gap: 30px;
-        justify-content: center; /* Centre les logos horizontalement */
+        justify-content: center; 
     }
 
     & .timlogo_img, .maisonneuve_img {
