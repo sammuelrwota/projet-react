@@ -1,0 +1,143 @@
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 110px;
+}
+.navBar .divtest {
+  width: 75px;
+  height: 75px;
+  animation: example 3s infinite;
+}
+.navBar .nav-close,
+.navBar .nav-open {
+  display: none;
+}
+.navBar .nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+}
+.navBar .nav-menu li {
+  position: relative;
+}
+.navBar .nav-menu li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: width 3s ease-in-out;
+}
+.navBar .nav-menu li:hover {
+  cursor: pointer;
+}
+.navBar .nav-menu li:hover::after {
+  width: 100%;
+}
+.navBar .connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 85, 121) 36%, rgb(1, 21, 234) 90%, rgb(0, 212, 255) 100%);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navBar .connect:hover {
+  transform: scale(1.05);
+}
+@keyframes example {
+  0% {
+    filter: brightness(1);
+    filter: contrast(1);
+    -webkit-filter: brightness(1);
+    -webkit-filter: contrast(1);
+  }
+  50% {
+    filter: brightness(0.4);
+    filter: contrast(0.4);
+    -webkit-filter: brightness(0.4);
+    -webkit-filter: contrast(0.4);
+  }
+  100% {
+    filter: brightness(1);
+    filter: contrast(1);
+    -webkit-filter: brightness(1);
+    -webkit-filter: contrast(1);
+  }
+}
+.navBar .react-tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+.navBar .tooltip {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.navBar .react-tooltip-container:hover .tooltip {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .navBar .navBar {
+    margin: 20px 50px;
+  }
+  .navBar .connect {
+    display: none;
+  }
+  .navBar .nav-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+  }
+  .navBar .nav-close {
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 270px;
+    width: 30px;
+  }
+  .navBar .logoReact {
+    display: none;
+  }
+  .navBar .nav-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 90px;
+    background-color: rgb(23, 17, 57);
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -350px;
+  }
+  .navBar .nav-menu li {
+    font-size: 30px;
+    padding-left: 100px;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .navBar .nav-menu li::after {
+    transition: none;
+  }
+  .navBar .nav-menu li:hover::after {
+    width: 200%;
+  }
+}/*# sourceMappingURL=BarreNav.css.map */

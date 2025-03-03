@@ -72,24 +72,33 @@
 
         .underlineClick {
             cursor: pointer;
-            position: relative; 
-        
-            &:hover {
-                text-decoration: none; 
-            }
-        
-            &:hover::after {
-                content: ""; 
-                position: absolute;
-                bottom: -5px; 
-                left: 0;
-                width: 50%;
-                height: 2px; 
-                background-color: #4e4e4e; 
-                transition: width 0.3s ease;
-            }
-        }        
+            position: relative;
 
+            &:hover {
+                text-decoration: none;
+            }
+
+            &::after {
+                content: "Appuie sur moi";
+                position: absolute;
+                bottom: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #333;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 12px;
+                white-space: nowrap;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s ease;
+            }
+
+            &:hover::after {
+                opacity: 1;
+            }
+        }
 
         hr {
             outline: none;
@@ -147,9 +156,6 @@
         transition: opacity 2s ease, transform 2s ease;
     }
 
-
-
-
     .showCompetenceFigma,
     .showCompetenceHtmlCss,
     .showCompetenceReactJs,
@@ -165,7 +171,6 @@
         z-index: 1; 
         transition: transform 0.5s ease, z-index 0s; 
     }
-    
 }
 
 @media(max-width:768px) {
@@ -215,25 +220,5 @@
                 font-size: 14px;
             }
         }
-    }
-
-
-}
-
-@media(max-width:768px) {
-    .showCompetenceFigma,
-    .showCompetenceHtmlCss,
-    .showCompetenceReactJs,
-    .showCompetenceJavascript,
-    .showCompetenceScss,
-    .showCompetencePhp,
-    .showCompetenceMaya,
-    .showCompetenceGithub,
-    .showCompetenceWp,
-    .showCompetenceUnity,
-    .showCompetenceAdobe {
-        transform: translate(-50%, -50%) translateY(100px) translateX(0px);
-        z-index: 1; 
-        transition: transform 0.5s ease, z-index 0s; 
     }
 }

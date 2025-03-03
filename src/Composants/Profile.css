@@ -1,0 +1,98 @@
+.principal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+}
+.principal .photoDeMoi_img {
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+.principal .lesImages {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+}
+.principal .timlogo_img, .principal .maisonneuve_img {
+  border-radius: none;
+}
+.principal h1 {
+  text-align: center;
+  width: 70%;
+  font-size: 45px;
+  font-weight: 600;
+}
+.principal h1 span {
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 85, 121) 36%, rgb(1, 21, 234) 90%, rgb(0, 212, 255) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.principal p {
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 40px;
+}
+.principal .cv {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.principal .cv .connecte-avec-moi,
+.principal .cv .moncv {
+  padding: 25px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.principal .cv .connecte-avec-moi {
+  padding: 25px 45px;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 85, 121) 36%, rgb(1, 21, 234) 90%, rgb(0, 212, 255) 100%);
+}
+.principal .cv .connecte-avec-moi:hover {
+  border: 2px solid white;
+}
+.principal .cv .moncv {
+  padding: 25px 75px;
+  border: 2px solid white;
+}
+.principal .cv .moncv:hover {
+  border: 2px solid rgb(1, 21, 234);
+}
+
+@media (max-width: 768px) {
+  .photoDeMoi_img {
+    margin-bottom: 260px;
+  }
+  .principal h1 {
+    margin-top: 50px;
+    width: 90%;
+    font-size: 30px;
+  }
+  .principal p {
+    width: 60%;
+    font-size: 18px;
+    line-height: 32px;
+    margin: 10px 0px;
+  }
+  .cv {
+    gap: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 50px;
+  }
+  .cv .connecte-avec-moi {
+    padding: 20px 20px;
+    border-radius: 40px;
+  }
+  .cv .moncv {
+    padding: 20px 30px;
+    border: 40px;
+  }
+}/*# sourceMappingURL=Profile.css.map */

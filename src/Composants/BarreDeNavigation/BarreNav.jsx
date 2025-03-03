@@ -58,7 +58,7 @@ function BarreNav({ setActivePage }) {
                     style={{ width: "35px", height: "35px" }}
                 />
                 {showTooltip && (
-                    <div className="tooltip">Site fait avec React</div>
+                    <div className="tooltip">Ceci est fait avec React!</div>
                 )}
             </div>
             

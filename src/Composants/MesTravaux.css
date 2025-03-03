@@ -1,0 +1,106 @@
+.mestravaux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+}
+.mestravaux .mestravaux-titre {
+  position: relative;
+}
+.mestravaux .mestravaux-titre h1 {
+  padding: 0px 30px;
+  font-size: 60px;
+  font-weight: 600;
+}
+.mestravaux .mestravaux-titre img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.mestravaux .mestravaux-contenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+.mestravaux .mestravaux-contenu img {
+  box-sizing: border-box;
+  border: 2px solid rgb(78, 78, 252);
+  border-radius: 5px;
+  width: 100%; /* Prend toute la largeur de son conteneur */
+  max-width: 270px; /* Limite la taille maximale des images */
+  height: 200px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.mestravaux .mestravaux-contenu img:hover {
+  transform: scale(1.1);
+  border: 4px solid blue;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.mestravaux .montravail-montreplus {
+  display: flex;
+  gap: 20px;
+  border-radius: 50px;
+  border: 2px solid white;
+  padding: 30px 60px;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 80px;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.mestravaux .montravail-montreplus a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+.mestravaux .montravail-montreplus a:hover {
+  gap: 30px;
+  transition: 0.6s;
+}
+.mestravaux .montravail-montreplus img {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+.mestravaux .montravail-montreplus:hover {
+  gap: 30px;
+  transition: 0.6s;
+}
+
+@media (max-width: 768px) {
+  .mestravaux {
+    gap: 50px;
+    margin: 30px 40px;
+    align-items: start;
+  }
+  .mestravaux-titre h1 {
+    padding: 0;
+    font-size: 50px;
+    font-weight: 600;
+  }
+  .mestravaux-contenu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5px;
+  }
+  .mestravaux-contenu img {
+    width: 100%; /* Ajuste la taille des images */
+    max-width: 200px; /* Limite la largeur des images */
+    height: 80px; /* Ajuste la hauteur des images */
+  }
+  .montravail-montreplus {
+    padding: 20px 40px;
+    font-size: 14px;
+    margin: 50px auto;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=MesTravaux.css.map */
