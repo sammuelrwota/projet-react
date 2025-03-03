@@ -59,6 +59,19 @@
     }
   }
 
+  @keyframes example {
+    0% {
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(2);
+    }
+    100% {
+      filter: brightness(1);
+    }
+  }
+  
+
   @keyframes brillanceEtRotation {
     0% {
       transform: rotate(0deg);
