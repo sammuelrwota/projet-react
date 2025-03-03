@@ -9,6 +9,8 @@ import Php from "../Notions/Php";
 import ReactJs from "../Notions/ReactJs";
 import Scss from "../Notions/Scss";
 import Wp from "../Notions/Wp";
+import Unity from "../Notions/Unity";
+import Adobe from "../Notions/Adobe";
 
 function ProposDeMoi() {
     const [competenceActive, setCompetenceActive] = useState(null);
@@ -99,6 +101,14 @@ function ProposDeMoi() {
                             <p className="underlineClick">Wordpress</p>
                             <hr style={{ width: "70%" }} />
                         </div>
+                        <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Unity")}>
+                            <p className="underlineClick">Unity</p>
+                            <hr style={{ width: "75%" }} />
+                        </div>
+                        <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Adobe")}>
+                            <p className="underlineClick">Adobe</p>
+                            <hr style={{ width: "90%" }} />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,6 +121,8 @@ function ProposDeMoi() {
                 competenceActive === "Php" ? "showCompetencePhp" :
                 competenceActive === "Maya" ? "showCompetenceMaya" :
                 competenceActive === "Github" ? "showCompetenceGithub" :
+                competenceActive === "Unity" ? "showCompetenceUnity" :
+                competenceActive === "Adobe" ? "showCompetenceAdobe" :
                 competenceActive === "Wp" ? "showCompetenceWp" : ""}`}>
                 {competenceActive === "Figma" && <Figma />}
                 {competenceActive === "HtmlCss" && <HtmlCss />}
@@ -121,6 +133,9 @@ function ProposDeMoi() {
                 {competenceActive === "Maya" && <Maya />}
                 {competenceActive === "Github" && <Github />}
                 {competenceActive === "Wp" && <Wp />}
+                {competenceActive === "Unity" && <Unity />}
+                {competenceActive === "Adobe" && <Adobe />}
+
             </div>
 
 

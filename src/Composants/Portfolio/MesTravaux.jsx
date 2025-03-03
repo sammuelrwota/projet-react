@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './MesTravaux.scss';
-import mestravauxData from '../../data/mestravaux.js';  // Utilisez le bon chemin relatif
+import mestravauxData from '../../data/mestravaux.js'; 
 import fleche_droite from '../../assets/fleche-droite.svg'
 
 function MesTravaux() {
@@ -17,8 +17,8 @@ function MesTravaux() {
                     <div key={index}>
                         <img 
                             src={travail.w_img} 
-                            alt={`Travail ${index + 1}`}  // Corrigé ici
-                            onError={() => console.log(`Erreur de chargement de l'image: ${travail.w_img}`)}  // Corrigé ici
+                            alt={`Travail ${index + 1}`}
+                            onError={() => console.log(`Erreur de chargement de l'image: ${travail.w_img}`)}
                         />
                     </div>
                 ))}

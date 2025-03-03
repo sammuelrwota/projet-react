@@ -8,6 +8,7 @@ function BarreNav({ setActivePage }) {
         <div className="navBar">
             <img className="divtest" src={monlogo} alt="Mon Logo" style={{ width: "75px", height: "75px", cursor: "pointer" }} onClick={() => setActivePage('profile')} />
             <ul className="nav-menu">
+            <li onClick={() => setActivePage('profile')}>Accueil</li>
                 <li onClick={() => setActivePage('about')}>À propos de moi</li>
                 <li onClick={() => setActivePage('portfolio')}>Portfolio</li>
                 <li onClick={() => setActivePage('contact')}>Contact</li>

@@ -1,11 +1,11 @@
-.CompetenceWp { /* Modifié ici */
+.CompetenceWp {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 600px;
-    height: 520px;
+    height: 620px;
     background-color: white;
     position: absolute;
     top: 50%;
@@ -18,7 +18,7 @@
     z-index: -1;
 }
 
-.WpTitre h1 { /* Modifié ici */
+.WpTitre h1 {
     font-size: 40px;
     font-weight: 400;
     margin-bottom: 20px;
@@ -26,7 +26,7 @@
     text-align: center;
 }
 
-.paragrapheWp .pWp { /* Modifié ici */
+.paragrapheWp p {
     width: 430px;
     font-size: 16px;
     text-align: justify;
