@@ -4,6 +4,11 @@ import timlogo from '../../assets/tim.png';
 import Maisonneuvelogo from '../../assets/logo-maisonneuve.jpg';
 
 function Profile({ setActivePage }) {
+    const handleCVClick = () => {
+        // Redirect to the Google Drive PDF view link
+        window.location.href = "https://drive.google.com/uc?export=view&id=1-hE-N1nc1upYHkCXXM0RbZrkSlot-x5c"; 
+    };
+
     return (
         <div className="principal">
             <img className="photoDeMoi_img" src="images/PhotoDeMoi.jpg" alt="Photo de l'étudiant" style={{ width: '150px', height: '150px' }} />
@@ -24,7 +29,7 @@ function Profile({ setActivePage }) {
 
             <div className="cv">
                 <div className="connecte-avec-moi" onClick={() => setActivePage('connecte')}>Connecte avec moi</div>
-                <div className="moncv">Mon CV</div>
+                <div className="moncv" onClick={handleCVClick}>Mon CV</div>
             </div>
         </div>
     );
