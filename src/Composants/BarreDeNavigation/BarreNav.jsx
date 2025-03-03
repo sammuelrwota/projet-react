@@ -3,6 +3,7 @@ import './BarreNav.scss';
 import monlogo from '../../assets/logo.svg'
 import menuicon from '../../assets/menuicon.png'
 import menuiconclose from '../../assets/menuicon-close.png'
+import reacticon from  '../../assets/react-icon.png'
 
 function BarreNav({ setActivePage }) {
     const menuRef = useRef();
@@ -21,7 +22,7 @@ function BarreNav({ setActivePage }) {
                 className="divtest"
                 src={monlogo}
                 alt="Mon Logo"
-                style={{ width: "75px", height: "75px", cursor: "pointer" }}
+                style={{ width: "100px", height: "100px", cursor: "pointer" }}
                 onClick={() => setActivePage('profile')}
             />
             <img
@@ -43,6 +44,7 @@ function BarreNav({ setActivePage }) {
                 <li onClick={() => setActivePage('portfolio')}>Portfolio</li>
                 <li onClick={() => setActivePage('contact')}>Contact</li>
             </ul>
+            <img src={reacticon} alt="Icône de React"  style={{ width: "35px", height: "35px"}} />
             <div className="connect" onClick={() => setActivePage('connecte')}>
                 Connecte avec moi
             </div>
