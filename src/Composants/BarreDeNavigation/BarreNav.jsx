@@ -1,12 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './BarreNav.scss';
-import monlogo from '../../assets/logo.svg'
-import menuicon from '../../assets/menuicon.png'
-import menuiconclose from '../../assets/menuicon-close.png'
-import reacticon from  '../../assets/react-icon.png'
+import monlogo from '../../assets/logo.svg';
+import menuicon from '../../assets/menuicon.png';
+import menuiconclose from '../../assets/menuicon-close.png';
+import reacticon from '../../assets/react-icon.png';
 
 function BarreNav({ setActivePage }) {
     const menuRef = useRef();
+    const [showTooltip, setShowTooltip] = useState(false);
 
     const openMenu = () => {
         menuRef.current.style.right = "0";
@@ -37,14 +38,30 @@ function BarreNav({ setActivePage }) {
                     onClick={closeMenu}
                     alt=""
                     className="nav-close"
-                    style={{ width: "50px", height: "50px"}}
+                    style={{ width: "50px", height: "50px" }}
                 />
                 <li onClick={() => setActivePage('profile')}>Accueil</li>
                 <li onClick={() => setActivePage('about')}>À propos de moi</li>
                 <li onClick={() => setActivePage('portfolio')}>Portfolio</li>
                 <li onClick={() => setActivePage('contact')}>Contact</li>
             </ul>
-            <img src={reacticon} alt="Icône de React"  style={{ width: "35px", height: "35px"}} />
+            
+            <div 
+                className="react-tooltip-container"
+                onMouseEnter={() => setShowTooltip(true)}
+                onMouseLeave={() => setShowTooltip(false)}
+            >
+                <img
+                    className="logoReact"
+                    src={reacticon}
+                    alt="Icône de React"
+                    style={{ width: "35px", height: "35px" }}
+                />
+                {showTooltip && (
+                    <div className="tooltip">Site fait avec React</div>
+                )}
+            </div>
+            
             <div className="connect" onClick={() => setActivePage('connecte')}>
                 Connecte avec moi
             </div>

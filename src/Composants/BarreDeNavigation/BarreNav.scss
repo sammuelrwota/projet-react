@@ -1,18 +1,19 @@
 .navBar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 30px 110px;
-    & .divtest {
-      width: 75px;
-      height: 75pxpx;
-      animation: example 3s infinite; 
-    }
-  }  
-    .nav-close,
-    .nav-open {
-      display: none;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 110px;
+
+  & .divtest {
+    width: 75px;
+    height: 75px;
+    animation: example 3s infinite;
+  }
+
+  .nav-close,
+  .nav-open {
+    display: none;
+  }
 
   .nav-menu {
     display: flex;
@@ -21,12 +22,9 @@
     gap: 60px;
     font-size: 20px;
 
-
-
-  
     li {
       position: relative;
-  
+
       &::after {
         content: '';
         position: absolute;
@@ -37,107 +35,133 @@
         background-color: rgb(255, 255, 255);
         transition: width 3s ease-in-out;
       }
-  
+
       &:hover {
         cursor: pointer;
-  
+
         &::after {
           width: 100%;
         }
       }
     }
   }
-  
+
   .connect {
     padding: 20px 40px;
     border-radius: 50px;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,85,121,1) 36%, rgba(1,21,234,1) 90%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 85, 121, 1) 36%, rgba(1, 21, 234, 1) 90%, rgba(0, 212, 255, 1) 100%);
     font-size: 22px;
     cursor: pointer;
     transition: 0.5s;
-  
+
     &:hover {
       transform: scale(1.05);
     }
   }
 
   @keyframes example {
-    0%   {
-        filter: brightness(1);
-        filter: contrast(1);
-        -webkit-filter: brightness(1);
-        -webkit-filter: contrast(1);
+    0% {
+      filter: brightness(1);
+      filter: contrast(1);
+      -webkit-filter: brightness(1);
+      -webkit-filter: contrast(1);
     }
-    50%  {
-        filter: brightness(0.4);
-        filter: contrast(0.4);
-        -webkit-filter: brightness(0.4);
-        -webkit-filter: contrast(0.4);
+    50% {
+      filter: brightness(0.4);
+      filter: contrast(0.4);
+      -webkit-filter: brightness(0.4);
+      -webkit-filter: contrast(0.4);
     }
     100% {
-        filter: brightness(1);
-        filter: contrast(1);
-        -webkit-filter: brightness(1);
-        -webkit-filter: contrast(1);
+      filter: brightness(1);
+      filter: contrast(1);
+      -webkit-filter: brightness(1);
+      -webkit-filter: contrast(1);
     }
-}
-
-
-@media (max-width:768px)  {
-  .navBar {
-    margin: 20px 50px;
   }
 
-  .connect {
-    display: none;
-  }
-
-  .nav-open {
-    display: block;
-    position: fixed;
-    right: 30px;
-  }
-
-  .nav-close {
-    display: block;
+  .react-tooltip-container {
     position: relative;
-    top: 30px;
-    left: 270px;
-    width: 30px;
+    display: inline-block;
   }
 
-  .nav-menu {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    top: 0;
-    gap: 90px;
-    background-color: rgb(23, 17, 57);
-    width: 350px;
-    height: 100%;
-    z-index: 2;
-    transition: right 0.5s;
-    right: -350px;
+  .tooltip {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
 
-    li {
-      font-size: 30px;
-      padding-left: 100px;
-      flex-direction: row;
-      gap: 20px;
+  .react-tooltip-container:hover .tooltip {
+    opacity: 1;
+  }
 
-      &::after {
-        transition: none;
-      }
+  @media (max-width: 768px) {
+    .navBar {
+      margin: 20px 50px;
+    }
 
-      &:hover {
-         &::after {
-          width: 200%;
-         }
+    .connect {
+      display: none;
+    }
+
+    .nav-open {
+      display: block;
+      position: fixed;
+      right: 30px;
+    }
+
+    .nav-close {
+      display: block;
+      position: relative;
+      top: 30px;
+      left: 270px;
+      width: 30px;
+    }
+
+    .logoReact {
+      display: none;
+    }
+
+    .nav-menu {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      top: 0;
+      gap: 90px;
+      background-color: rgb(23, 17, 57);
+      width: 350px;
+      height: 100%;
+      z-index: 2;
+      transition: right 0.5s;
+      right: -350px;
+
+      li {
+        font-size: 30px;
+        padding-left: 100px;
+        flex-direction: row;
+        gap: 20px;
+
+        &::after {
+          transition: none;
+        }
+
+        &:hover {
+          &::after {
+            width: 200%;
+          }
+        }
       }
     }
   }
 }
-  
-
-  

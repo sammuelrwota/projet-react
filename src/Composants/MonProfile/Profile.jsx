@@ -10,7 +10,7 @@ function Profile({ setActivePage }) {
 
     return (
         <div className="principal">
-            <img className="photoDeMoi_img" src="images/PhotoDeMoi.jpg" alt="Photo de l'étudiant" style={{ width: '150px', height: '150px' }} />
+            <img className="photoDeMoi_img" src="images/PhotoDeMoi.jpg" alt="Photo de l'étudiant" style={{ width: '200px', height: '200px' }} />
 
             <div className="lesImages">
                 <a href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/" target="_blank" rel="noopener noreferrer" className="logo-link">
