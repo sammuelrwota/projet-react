@@ -63,6 +63,7 @@ function ProposDeMoi() {
                     <div className="APropos-paragraphe">
                         <p>Je suis étudiant dans le programme de Techniques d'intégrations multimédias au Collège de Maisonneuve.</p>
                         <p>À la recherche d'emploi.</p>
+                        <p className="survoler">Survoler les éléments ci-dessous.</p>
                     </div>
                     <div className="APropos-mescompetences">
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("HtmlCss")}>
@@ -75,7 +76,7 @@ function ProposDeMoi() {
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Javascript")}>
                             <p className="underlineClick">Javascript</p>
-                            <hr style={{ width: "70%" }} />
+                            <hr style={{ width: "77%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Scss")}>
                              <p className="underlineClick">SCSS</p>
@@ -83,7 +84,7 @@ function ProposDeMoi() {
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Php")}>
                             <p className="underlineClick">PHP</p>
-                            <hr style={{ width: "70%" }} />
+                            <hr style={{ width: "75%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Figma")}>
                             <p className="underlineClick">Figma</p>
@@ -99,11 +100,11 @@ function ProposDeMoi() {
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Wp")}>
                             <p className="underlineClick">Wordpress</p>
-                            <hr style={{ width: "70%" }} />
+                            <hr style={{ width: "75%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Unity")}>
                             <p className="underlineClick">Unity</p>
-                            <hr style={{ width: "75%" }} />
+                            <hr style={{ width: "80%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Adobe")}>
                             <p className="underlineClick">Adobe</p>

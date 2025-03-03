@@ -45,6 +45,11 @@
         gap: 20px;
         font-size: 24px;
         font-weight: 500;
+        
+        & .survoler {
+            font-style: italic;
+            color: grey;
+        }
     }
 
     .APropos-mescompetences {

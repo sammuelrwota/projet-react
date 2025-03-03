@@ -9,13 +9,20 @@
       animation: example 3s infinite; /* Apply animation */
     }
   }  
-  
+    .nav-close,
+    .nav-open {
+      display: none;
+    }
+
   .nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 60px;
     font-size: 20px;
+
+
+
   
     li {
       position: relative;
@@ -73,6 +80,63 @@
         -webkit-filter: brightness(1);
         -webkit-filter: contrast(1);
     }
+}
+
+
+@media (max-width:768px)  {
+  .navBar {
+    margin: 20px 50px;
+  }
+
+  .connect {
+    display: none;
+  }
+
+  .nav-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+  }
+
+  .nav-close {
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 270px;
+    width: 30px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 90px;
+    background-color: rgb(23, 17, 57);
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -350px;
+
+    li {
+      font-size: 30px;
+      padding-left: 100px;
+      flex-direction: row;
+      gap: 20px;
+
+      &::after {
+        transition: none;
+      }
+
+      &:hover {
+         &::after {
+          width: 200%;
+         }
+      }
+    }
+  }
 }
   
 

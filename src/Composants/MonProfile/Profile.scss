@@ -4,11 +4,22 @@
     flex-direction: column;
     gap: 35px;
 
-    img {
-        border-radius: 50%; /* Applique le rayon pour arrondir les coins en cercle */
-        object-fit: cover; /* Permet de garder l'image bien cadrée dans le cercle */
+    & .photoDeMoi_img {
+        border-radius: 50%;
+        object-fit: cover;
         margin-top: 100px;
         margin-bottom: 20px;
+    }
+
+    & .lesImages {
+        display: flex;
+        flex-direction: row; /* Aligne les logos horizontalement */
+        gap: 30px;
+        justify-content: center; /* Centre les logos horizontalement */
+    }
+
+    & .timlogo_img, .maisonneuve_img {
+        border-radius: none;
     }
 
     h1 {
