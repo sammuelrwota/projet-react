@@ -4,27 +4,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 600px;
+    width: 520px;
     height: 520px;
     background-color: white;
+    border: 4mm ridge rgba(26, 1, 213, 0.6);
     position: absolute;
     top: 50%;
-    left: 50%;
+    left : 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 20px;
     transition: all 0.5s ease; 
-    z-index: -1;
+    z-index: -1; 
 }
 
 .FigmaTitre h1 {
     font-size: 40px;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: black;
     text-align: center;
-    margin-bottom: 10px;
+    font-style: italic;
+    -webkit-box-shadow: 10px 10px 5px 9px rgba(0,0,0,0.56);
+    -moz-box-shadow: 10px 10px 5px 9px rgba(0,0,0,0.56);
+    box-shadow: 10px 10px 5px 9px rgba(0,0,0,0.56);
 }
 
 .paragrapheFigma p {
