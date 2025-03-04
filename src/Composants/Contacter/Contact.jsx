@@ -35,7 +35,10 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setShowNotification(true);
+
+        setTimeout(() => {
+            setShowNotification(true);
+        }, 1000); 
     };
 
     return( 
