@@ -39,8 +39,8 @@ $font-size-medium: 22px;
       box-sizing: border-box;
       border: 2px solid $border-color;
       border-radius: 5px;
-      width: 100%; /* Prend toute la largeur de son conteneur */
-      max-width: 270px; /* Limite la taille maximale des images */
+      width: 100%;
+      max-width: 270px;
       height: 200px;
       transition: 0.3s;
       cursor: pointer;
@@ -91,11 +91,11 @@ $font-size-medium: 22px;
   }
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .mestravaux {
     gap: 50px;
     margin: 30px 40px;
-    align-items: start;
+    align-items: flex-start; // align-items start pour une meilleure compatibilité sur mobile
   }
 
   .mestravaux-titre h1 {
@@ -110,10 +110,10 @@ $font-size-medium: 22px;
     width: 100%;
     gap: 5px;
 
-    & img {
-      width: 100%; 
-      max-width: 200px; 
-      height: 80px; 
+    img {
+      width: 100%;
+      max-width: 200px;
+      height: 80px;
     }
   }
 

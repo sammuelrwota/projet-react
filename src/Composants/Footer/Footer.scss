@@ -6,18 +6,19 @@
     .footer-top {
         display: flex;
         justify-content: space-between;
+        align-items: center;  
 
         .footer-top-gauche {
             margin: 35px;
             font-size: 16px;
-            max-width: 300px;
-            line-height: 20px;
+            display: flex;
+            align-items: center; 
         }
 
         .footer-top-droite {
             margin: 35px;
             display: flex;
-            align-items: center;
+            align-items: center;  
             gap: 35px;
 
             .footer-email-input {
@@ -83,28 +84,37 @@
 
         .bottom-droite {
             display: flex;
-            gap: 50px;
         }
     }
 }
-@media(max-width:768px) {
+
+@media(max-width: 768px) {
     .footer {
-        margin: 40px 1px !important;
-    }
-    .footer-top {
-        flex-direction: column;
-        gap: 0px !important;
-    }
-    .footer-bottom {
-        display: flex;
-        flex-direction: column-reverse;
-        margin-bottom: 0px !important;
-    }
-    .footer-top-gauche {
-        margin: 35px !important;
-        font-size: 16px;
-        max-width: 700px !important;
-        line-height: 20px;
+        margin: 40px 1px;
     }
 
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        margin-bottom: 10px;
+        align-items: center; 
+        padding: 0 20px;
+
+        .footer-bottom-left {
+            font-size: 14px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .bottom-droite {
+            flex-direction: column;
+            gap: 0px;
+            align-items: center;
+            width: 100%; 
+            padding: 0 20px; 
+        }
+    }
 }

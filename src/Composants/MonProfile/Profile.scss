@@ -19,7 +19,6 @@
         100% { transform: rotate(360deg); }
     }
     
-
     & .photoDeMoi_img {
         border-radius: 50%;
         object-fit: cover;
@@ -35,7 +34,7 @@
     }
 
     & .timlogo_img, .maisonneuve_img {
-        border-radius: none;
+        border-radius: 0; 
     }
 
     h1 {
@@ -94,11 +93,9 @@
     }
 }
 
-
 @media(max-width:768px) {
     .photoDeMoi_img {
         margin-bottom: 260px;
-       
     }
 
     .principal h1 {
@@ -127,7 +124,7 @@
 
         & .moncv {
             padding: 20px 30px;
-            border: 40px;
+            border: 2px solid white; 
         }
     }
 }

@@ -7,7 +7,6 @@ function Footer() {
         <div className="footer">
             <div className="footer-top">
                 <div className="footer-top-gauche">
-                    <img src="" alt="" />
                     <p>Je suis étudiant dans le programme de Techniques d'intégrations multimédias au Collège de Maisonneuve.</p>
                 </div>
                 <div className="footer-top-droite">
