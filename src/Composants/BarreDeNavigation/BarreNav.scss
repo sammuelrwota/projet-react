@@ -2,8 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 50px 120px;
-
+  margin: 0; 
+  padding: 0 20px; 
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #1a204e; 
+  
   & .divtest {
     width: 75px;
     height: 75px;
@@ -137,80 +142,81 @@
 }
 
 
-  @media (max-width: 768px) {
-    .navBar {
-      margin: 20px 50px;
-    }
+@media (max-width: 768px) {
+  .navBar {
+    margin: 20px 50px;
+  }
 
-    .connect {
-      display: none;
-    }
+  .connect {
+    display: none;
+  }
 
-    .nav-open {
-      display: block;
-      position: fixed;
-      right: 30px;
-    }
+  .nav-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+  }
 
-    .nav-close {
-      display: block;
-      position: relative;
-      top: 80px;
-      left: 270px;
-      width: 30px;
-    }
+  .nav-close {
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 270px;
+    width: 30px;
+  }
 
-    .logoReact {
-      display: none;
-    }
+  .logoReact {
+    display: none;
+  }
 
-    .theme-toggle {
-      
-      cursor: pointer;
-      font-size: 12px;
-      color: var(--text-color);
-      padding: 10px;
-      border: 2px solid var(--text-color); 
-      border-radius: 8px; 
-      background: none;
-      transition: color 0.3s ease, border-color 0.3s ease; 
-    }
+  .theme-toggle {
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--text-color);
+    padding: 10px;
+    border: 2px solid var(--text-color); 
+    border-radius: 8px; 
+    background: none;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    margin-right: 200px ; 
+  }
   
-    .theme-toggle:hover {
-        color: #000000;
-        border-color: #000000; 
-    }
+  .theme-toggle:hover {
+    color: #000000;
+    border-color: #000000; 
+  }
 
-    .nav-menu {
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      top: 0;
-      gap: 90px;
-      background-color: rgb(23, 17, 57);
-      width: 350px;
-      height: 100%;
-      z-index: 2;
-      transition: right 0.5s;
-      right: -350px;
+  .nav-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 90px;
+    background-color: rgb(23, 17, 57);
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -350px;
 
-      li {
-        font-size: 30px;
-        padding-left: 100px;
-        flex-direction: row;
-        gap: 20px;
+    li {
+      font-size: 30px;
+      padding-left: 100px;
+      flex-direction: row;
+      gap: 20px;
 
+      &::after {
+        transition: none;
+      }
+
+      &:hover {
         &::after {
-          transition: none;
-        }
-
-        &:hover {
-          &::after {
-            width: 200%;
-          }
+          width: 200%;
         }
       }
     }
   }
+}
+
 }

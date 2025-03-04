@@ -66,7 +66,7 @@ function BarreNav({ setActivePage }) {
             </div>            
             
             <div className="theme-toggle" onClick={toggleTheme}>
-                {theme === 'light' ? '🌙 Thème ' : '☀️ Thème '}
+                {theme === 'light' ? '🌙 Thème Nuit' : '☀️ Thème Jour'}
             </div>
             
             <div className="connect" onClick={() => setActivePage('connecte')}>
