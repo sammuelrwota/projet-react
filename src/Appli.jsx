@@ -1,7 +1,7 @@
 import './Appli.scss'; 
 import React, { useState } from 'react';
 import BarreNav from './Composants/BarreDeNavigation/BarreNav.jsx';
-import Profile from './Composants/MonProfile/Profile.jsx';
+import Profile from './Composants/MonProfile/Profile.jsx';  // Assurez-vous que le chemin est correct
 import ProposDeMoi from './Composants/APropos/ProposDeMoi.jsx';
 import MesTravaux from './Composants/Portfolio/MesTravaux.jsx';
 import Contact from './Composants/Contacter/Contact.jsx';

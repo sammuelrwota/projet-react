@@ -1,0 +1,98 @@
+.feedback-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;  
+  backdrop-filter: blur(5px);
+}
+
+.feedback-modal {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-modal h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 24px;
+  color: #333; 
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 10px; 
+
+  .rating-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .star {
+      font-size: 2rem;
+      cursor: pointer;
+      color: #ccc;
+      transition: color 0.2s;
+
+      &.filled {
+        color: #ffcc00;
+      }
+    }
+
+    .rating-label {
+      font-size: 12px;
+      color: #555;
+      margin-top: 5px;
+      text-align: center;
+      display: block;
+    }
+  }
+}
+
+.comment {
+  margin-bottom: 1rem;
+
+  textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    color: #555; 
+    font-size: 16px; 
+    background-color: #f9f9f9; 
+  }
+}
+
+.feedback-modal h2,
+.comment textarea {
+  color: #555; 
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #add8e6; 
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #a7c7d3; 
+  }
+}
