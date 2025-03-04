@@ -7,7 +7,6 @@ function Feedback({ isOpen, closeModal }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Note: ${rating}\nCommentaire: ${comment}`);
     closeModal();
   };
 
