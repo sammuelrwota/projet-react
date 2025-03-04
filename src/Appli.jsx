@@ -35,9 +35,9 @@ function Appli() {
 
   return (
     <div>
-        <BarreNav setActivePage={handleSetActivePage}/> 
-        {renderPage()}
-        <Footer />
+      <BarreNav setActivePage={handleSetActivePage}/> 
+      {renderPage()}
+      <Footer />
     </div>
   );
 }

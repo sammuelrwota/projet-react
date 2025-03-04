@@ -63,7 +63,7 @@ function ProposDeMoi() {
                     <div className="APropos-paragraphe">
                         <p>Je suis étudiant dans le programme de Techniques d'intégrations multimédias au Collège de Maisonneuve.</p>
                         <p>À la recherche d'emploi.</p>
-                        <p className="survoler">Survoler les éléments ci-dessous.</p>
+                        <p className="survoler">Survolez les éléments ci-dessous.</p>
                     </div>
                     <div className="APropos-mescompetences">
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("HtmlCss")}>
