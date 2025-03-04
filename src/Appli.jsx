@@ -1,12 +1,13 @@
-import './Appli.scss'; 
+import './Appli.scss';
 import React, { useState } from 'react';
 import BarreNav from './Composants/BarreDeNavigation/BarreNav.jsx';
-import Profile from './Composants/MonProfile/Profile.jsx';  // Assurez-vous que le chemin est correct
+import Profile from './Composants/MonProfile/Profile.jsx';
 import ProposDeMoi from './Composants/APropos/ProposDeMoi.jsx';
 import MesTravaux from './Composants/Portfolio/MesTravaux.jsx';
 import Contact from './Composants/Contacter/Contact.jsx';
 import Footer from './Composants/Footer/Footer.jsx';
 import ConnecteAvecMoi from './Composants/ConnecteAvecMoi/ConnecteAvecMoi.jsx';
+import Page404 from './Composants/Page404/Page404.jsx';
 
 function Appli() {
   const [activePage, setActivePage] = useState('profile'); 
@@ -29,13 +30,13 @@ function Appli() {
       case 'connecte':
         return <ConnecteAvecMoi />;
       default:
-        return <Profile setActivePage={handleSetActivePage} />;
+        return <Page404 />; 
     }
   };
 
   return (
     <div>
-      <BarreNav setActivePage={handleSetActivePage}/> 
+      <BarreNav setActivePage={handleSetActivePage} /> 
       {renderPage()}
       <Footer />
     </div>
