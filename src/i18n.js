@@ -88,9 +88,6 @@ const resources = {
         "unity_paragraph": "Unity is a powerful game engine used for creating both 2D and 3D video games. It offers remarkable flexibility and is accessible to both beginners and experienced developers. With its programming language C#, it is easy to design interactive environments and work on large-scale projects. I learned to use Unity during my courses with my teacher, Martin St-Pierre, and it allowed me to develop solid skills in game creation.",
         "wp_title": "WordPress",
         "wp_paragraph": "With my teacher Eddy Martin, I am learning to use WordPress to create and manage dynamic websites. I develop custom themes, program plugins, and integrate databases to manage content. This experience allows me to master the technical aspects of WordPress and create interactive and high-performing websites.",
-        "page404_title": "404 - Page Not Found",
-        "page404_message": "Sorry, this page doesn't exist or has been moved.",
-        "page404_return_link": "Back to home",
         "animation_title": "My recent",
         "recent": "work!",
         "practical": "projects!",
@@ -184,14 +181,11 @@ const resources = {
         "unity_paragraph": "Unity est un moteur de jeu puissant utilisé pour la création de jeux vidéo en 2D et en 3D. Il offre une flexibilité remarquable et est accessible à la fois aux débutants et aux développeurs expérimentés. Grâce à son langage de programmation C#, il est facile de concevoir des environnements interactifs et de travailler sur des projets de grande envergure. J'ai appris à utiliser Unity lors de mes cours avec mon enseignant, Martin St-Pierre, et cela m'a permis de développer des compétences solides dans la création de jeux.",
         "wp_title": "WordPress",
         "wp_paragraph": "Avec mon enseignant Eddy Martin, j'apprends à utiliser WordPress pour créer et gérer des sites web dynamiques. Je développe des thèmes personnalisés, programme des extensions et intègre des bases de données pour gérer le contenu. Cette expérience me permet de maîtriser les aspects techniques de WordPress et de créer des sites interactifs et performants.",
-        "page404_title": "404 - Page non trouvée",
-        "page404_message": "Désolé, cette page n'existe pas ou a été déplacée.",
-        "page404_return_link": "Retour à l'accueil",
-              "animation_title": "Mon travail",
-      "recent": "récent!",
-      "practical": "pratique!",
-      "old": "ancien!",
-      "personal": "personnel!"
+        "animation_title": "Mon travail",
+        "recent": "récent!",
+        "practical": "pratique!",
+        "old": "ancien!",
+        "personal": "personnel!"
       }
     }
   };

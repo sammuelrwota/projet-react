@@ -7,7 +7,6 @@ import MesTravaux from './Composants/Portfolio/MesTravaux.jsx';
 import Contact from './Composants/Contacter/Contact.jsx';
 import Footer from './Composants/Footer/Footer.jsx';
 import ConnecteAvecMoi from './Composants/ConnecteAvecMoi/ConnecteAvecMoi.jsx';
-import Page404 from './Composants/Page404/Page404.jsx';
 
 function Appli() {
   const [activePage, setActivePage] = useState('profile'); 
@@ -30,7 +29,7 @@ function Appli() {
       case 'connecte':
         return <ConnecteAvecMoi />;
       default:
-        return <Page404 />; 
+
     }
   };
 
