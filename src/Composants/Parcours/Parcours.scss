@@ -29,6 +29,7 @@
             span {
                 font-size: 40px;
                 font-weight: bold;
+                cursor: pointer;
             }
         }
     }
@@ -68,6 +69,7 @@
         color: white;
         text-align: center;
         position: relative;
+        cursor: pointer;
     }
     
     .timeline-text.visible {
