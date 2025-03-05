@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next'; 
 import './MesTravaux.scss';
 import mestravauxData from '../../data/mestravaux.js'; 
 import fleche_droite from '../../assets/fleche-droite.svg';
 
 function MesTravaux() {
+    const { t } = useTranslation(); 
     const [mesTravauxData, setMesTravauxData] = useState(mestravauxData.mestravaux_data);
 
     const redirectToLink = (travail) => {
@@ -22,8 +24,7 @@ function MesTravaux() {
     return (
         <div className="mestravaux">
             <div className="mestravaux-titre">
-                <h1>Mon travail récent</h1>
-                <img src="" alt="" />
+                <h1>{t('recent_work')}</h1>
             </div>
             <div className="mestravaux-contenu">
                 {mesTravauxData.map((travail, index) => (
@@ -39,7 +40,7 @@ function MesTravaux() {
             </div>
             <div className="montravail-montreplus">
                 <a href="https://www.behance.net/profilsammuel" target="_blank" rel="noopener noreferrer">
-                    <p>Voir Plus</p>
+                    <p>{t('see_more')}</p> 
                     <img 
                         src={fleche_droite} 
                         alt="Fleche Droite" 

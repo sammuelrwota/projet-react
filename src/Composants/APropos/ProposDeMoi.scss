@@ -79,7 +79,7 @@
             }
 
             &::after {
-                content: "Appuie sur moi";
+                content: "Click!";
                 position: absolute;
                 bottom: -25px;
                 left: 50%;
@@ -149,7 +149,6 @@
         }
     }
 
-    // Effet apparition
     .apparition {
         opacity: 0;
         transform: translateX(-100%);

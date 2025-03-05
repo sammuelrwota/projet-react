@@ -58,6 +58,8 @@
     font-size: 22px;
     cursor: pointer;
     transition: 0.5s;
+    
+    margin-right: 100px;
 
     &:hover {
       transform: scale(1.05);
@@ -121,6 +123,31 @@
     pointer-events: none;
   }
 
+  .language-switcher {
+    position: absolute;
+    top: 10px; 
+    right: 20px; 
+    display: flex;
+    gap: 10px;
+  
+    button {
+      background: none;
+      color: rgb(205, 206, 207);
+      padding: 5px 10px;
+      border: 1px solid rgba(205, 206, 207, 0.5);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s, color 0.3s;
+    
+      &:hover {
+        background: rgba(205, 206, 207, 0.2);
+        color: white;
+      }
+    }
+  }
+  
+
   .react-tooltip-container:hover .tooltip {
     opacity: 1;
   }
@@ -167,6 +194,30 @@
 
   .logoReact {
     display: none;
+  }
+
+  .language-switcher {
+    position: absolute;
+    top: 10px; 
+    right: 90px; 
+    display: flex;
+    gap: 10px;
+  
+    button {
+      background: none;
+      color: rgb(205, 206, 207);
+      padding: 5px 10px;
+      border: 1px solid rgba(205, 206, 207, 0.5);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: background 0.3s, color 0.3s;
+    
+      &:hover {
+        background: rgba(205, 206, 207, 0.2);
+        color: white;
+      }
+    }
   }
 
   .theme-toggle {

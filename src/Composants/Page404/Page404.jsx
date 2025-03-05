@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; 
 
 const Page404 = () => {
+  const { t } = useTranslation(); 
+
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>404 - Page non trouvée</h1>
-      <p style={styles.message}>Désolé, cette page n'existe pas ou a été déplacée.</p>
-      <Link to="/" style={styles.link}>Retour à l'accueil</Link>
+      <h1 style={styles.title}>{t('page404_title')}</h1> 
+      <p style={styles.message}>{t('page404_message')}</p> 
+      <Link to="/" style={styles.link}>{t('page404_return_link')}</Link> 
     </div>
   );
 };

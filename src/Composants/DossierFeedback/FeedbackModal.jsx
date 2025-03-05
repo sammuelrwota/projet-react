@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next'; 
 import './FeedbackModal.scss';
 
 function Feedback({ isOpen, closeModal }) {
+  const { t } = useTranslation(); 
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
 
@@ -15,7 +17,7 @@ function Feedback({ isOpen, closeModal }) {
   return (
     <div className="feedback-modal-overlay" onClick={closeModal}>
       <div className="feedback-modal" onClick={(e) => e.stopPropagation()}>
-        <h2>Laissez votre avis</h2>
+        <h2>{t('leave_review')}</h2>
         <form onSubmit={handleSubmit}>
           <div className="rating">
             {[1, 2, 3, 4, 5].map((star) => (
@@ -28,7 +30,7 @@ function Feedback({ isOpen, closeModal }) {
                 </span>
 
                 {rating === star && (
-                  <span className="rating-label">{getRatingLabel(star)}</span>
+                  <span className="rating-label">{t(`rating_${star}`)}</span>
                 )}
               </div>
             ))}
@@ -37,32 +39,14 @@ function Feedback({ isOpen, closeModal }) {
             <textarea
               value={comment}
               onChange={(e) => setComment(e.target.value)}
-              placeholder="Écrivez votre commentaire ici..."
+              placeholder={t('write_comment')}
             />
           </div>
-          <button type="submit">Envoyer</button>
+          <button type="submit">{t('submit')}</button>
         </form>
       </div>
     </div>
   );
 }
-
-
-const getRatingLabel = (rating) => {
-  switch (rating) {
-    case 1:
-      return 'Très mauvais';
-    case 2:
-      return 'Mauvais';
-    case 3:
-      return 'Passable';
-    case 4:
-      return 'Bien';
-    case 5:
-      return 'Très bien';
-    default:
-      return '';
-  }
-};
 
 export default Feedback;

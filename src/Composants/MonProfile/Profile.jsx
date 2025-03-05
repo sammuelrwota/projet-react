@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next"; 
 import "./Profile.scss";
 import timlogo from "../../assets/tim.png";
 import Maisonneuvelogo from "../../assets/logo-maisonneuve.jpg";
-import Feedback from "../DossierFeedback/FeedbackModal"; 
+import Feedback from "../DossierFeedback/FeedbackModal";
 
 function Profile({ setActivePage }) {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
-  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1500);
-
     return () => clearTimeout(timer);
   }, []);
 
@@ -67,26 +68,22 @@ function Profile({ setActivePage }) {
       </div>
 
       <h1>
-        <span>Je suis Sammuel Rwota </span>étudiant à Maisonneuve.
+        <span>{t('student_at', { name: 'Sammuel Rwota' })}</span>
       </h1>
-      <p>En recherche de stage d'été.</p>
+      <p>{t('internship_search')}</p>
 
       <div className="cv">
         <div className="connecte-avec-moi" onClick={() => setActivePage("connecte")}>
-          Connecte avec moi
+          {t('connect_with_me')}
         </div>
         <div className="moncv" onClick={handleCVClick}>
-          Mon CV
+          {t('my_cv')}
         </div>
       </div>
 
       <div className="laisser-un-avis-container">
-        <div
-          className="laisser-un-avis"
-          onClick={toggleModal}
-          title="Donne ton avis ici"
-        >
-          Laisser un avis
+        <div className="laisser-un-avis" onClick={toggleModal} title={t('leave_review')}>
+          {t('leave_review')}
         </div>
       </div>
 

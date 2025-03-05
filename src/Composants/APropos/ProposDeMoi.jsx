@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next"; 
 import './ProposDeMoi.scss';
 import Figma from "../Notions/Figma";
 import Github from "../Notions/Github";
@@ -13,6 +14,7 @@ import Unity from "../Notions/Unity";
 import Adobe from "../Notions/Adobe";
 
 function ProposDeMoi() {
+    const { t } = useTranslation(); 
     const [competenceActive, setCompetenceActive] = useState(null);
 
     useEffect(() => {
@@ -41,18 +43,16 @@ function ProposDeMoi() {
 
     const handleCompetenceClick = (competence) => {
         if (competenceActive === competence) {
-        
             setCompetenceActive(null);
         } else {
-          
             setCompetenceActive(competence);
         }
     };
-
+    
     return (
         <div className="AProposDeMoi">
             <div className="AProposDeMoi-titre">
-                <h1>À Propos de moi</h1>
+                <h1>{t('about_me_title')}</h1> 
                 <img src="" alt="" />
             </div>
             <div className="sections-AProposDeMoi">
@@ -61,53 +61,53 @@ function ProposDeMoi() {
                 </div>
                 <div className="APropos-droit">
                     <div className="APropos-paragraphe">
-                        <p>Je suis étudiant dans le programme de Techniques d'intégrations multimédias au Collège de Maisonneuve.</p>
-                        <p>À la recherche d'emploi.</p>
-                        <p className="survoler">Survolez les éléments ci-dessous.</p>
+                        <p>{t('about_me_paragraph_1')}</p> 
+                        <p>{t('about_me_paragraph_2')}</p> 
+                        <p className="survoler">{t('hover_to_see')}</p> 
                     </div>
                     <div className="APropos-mescompetences">
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("HtmlCss")}>
-                            <p className="underlineClick">HTML & CSS</p>
+                            <p className="underlineClick">{t('html_css')}</p>
                             <hr style={{ width: "85%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("ReactJs")}>
-                            <p className="underlineClick">React JS</p>
+                            <p className="underlineClick">{t('react_js')}</p>
                             <hr style={{ width: "85%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Javascript")}>
-                            <p className="underlineClick">Javascript</p>
+                            <p className="underlineClick">{t('javascript')}</p>
                             <hr style={{ width: "77%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Scss")}>
-                             <p className="underlineClick">SCSS</p>
+                             <p className="underlineClick">{t('scss')}</p>
                             <hr style={{ width: "90%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Php")}>
-                            <p className="underlineClick">PHP</p>
+                            <p className="underlineClick">{t('php')}</p>
                             <hr style={{ width: "75%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Figma")}>
-                            <p className="underlineClick">Figma</p>
+                            <p className="underlineClick">{t('figma')}</p>
                             <hr style={{ width: "85%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Maya")}>
-                             <p className="underlineClick">Maya</p>
+                             <p className="underlineClick">{t('maya')}</p>
                             <hr style={{ width: "67%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Github")}>
-                            <p className="underlineClick">Github</p>
+                            <p className="underlineClick">{t('github')}</p>
                             <hr style={{ width: "90%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Wp")}>
-                            <p className="underlineClick">Wordpress</p>
+                            <p className="underlineClick">{t('wordpress')}</p>
                             <hr style={{ width: "75%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Unity")}>
-                            <p className="underlineClick">Unity</p>
+                            <p className="underlineClick">{t('unity')}</p>
                             <hr style={{ width: "80%" }} />
                         </div>
                         <div className="APropos-competence apparition" onClick={() => handleCompetenceClick("Adobe")}>
-                            <p className="underlineClick">Adobe</p>
+                            <p className="underlineClick">{t('adobe')}</p>
                             <hr style={{ width: "90%" }} />
                         </div>
                     </div>
@@ -135,14 +135,12 @@ function ProposDeMoi() {
                 {competenceActive === "Wp" && <Wp />}
                 {competenceActive === "Unity" && <Unity />}
                 {competenceActive === "Adobe" && <Adobe />}
-
             </div>
-
 
             <div className="accomplissements">
                 <div className="mon-accomplissement">
                     <h1>2+</h1>
-                    <p>Années d'expérience au cégep!</p>
+                    <p>{t('years_of_experience')}</p>
                 </div>
                 <hr />
             </div>

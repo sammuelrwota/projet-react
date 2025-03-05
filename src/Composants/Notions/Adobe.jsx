@@ -1,13 +1,17 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next'; 
 import './Adobe.scss';
 import ProposDeMoi from '../APropos/ProposDeMoi';
 
 function Adobe() {
+    const { t } = useTranslation(); 
+
     return(
         <div className='CompetenceAdobe'>
             <div className='AdobeTitre'>
-                <h1>Adobe</h1>
+                <h1>{t('adobe_title')}</h1> 
                 <div className='paragrapheAdobe'>
-                    <p className='pAdobe'> Les logiciels Adobe comme Photoshop, Illustrator, Encoder et After Effects ont été essentiels durant mes deux premières années au TIM. Grâce à mes enseignants, j’ai acquis des compétences en montage vidéo, conception d’images matricielles et vectorielles, ainsi qu’en design. Photoshop m’a aidé à retoucher et améliorer les visuels, tandis qu’Illustrator a été clé pour les illustrations vectorielles. Encoder m’a permis d’optimiser les vidéos, et After Effects d’y ajouter animations et effets visuels.</p>
+                    <p className='pAdobe'>{t('adobe_paragraph')}</p> 
                 </div>
             </div>
         </div>
@@ -15,4 +19,3 @@ function Adobe() {
 }
 
 export default Adobe;
-
