@@ -28,8 +28,8 @@
         gap: 80px;
 
         img {
-            border-radius: 50%;  
-            object-fit: cover; 
+            border-radius: 50%;
+            object-fit: cover;
         }
     }
 
@@ -45,7 +45,7 @@
         gap: 20px;
         font-size: 24px;
         font-weight: 500;
-        
+
         & .survoler {
             font-style: italic;
             color: grey;
@@ -132,6 +132,8 @@
             align-items: center;
             gap: 10px;
             transition: 0.5s;
+            cursor: pointer;
+            position: relative; 
 
             h1 {
                 font-size: 60px;
@@ -145,6 +147,27 @@
             p {
                 font-size: 22px;
                 font-weight: 500;
+            }
+
+            &::after {
+                content: "Timeline !";
+                position: absolute;
+                bottom: 110%; 
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.8);
+                color: white;
+                padding: 6px 10px;
+                font-size: 14px;
+                border-radius: 5px;
+                white-space: nowrap;
+                opacity: 0; 
+                pointer-events: none; 
+                transition: opacity 0.3s ease-in-out; 
+            }
+
+            &:hover::after {
+                opacity: 1; 
             }
         }
     }
@@ -167,8 +190,8 @@
     .showCompetenceUnity,
     .showCompetenceAdobe {
         transform: translate(-50%, -50%) translateY(-325px) translateX(200px);
-        z-index: 1; 
-        transition: transform 0.5s ease, z-index 0s; 
+        z-index: 1;
+        transition: transform 0.5s ease, z-index 0s;
     }
 }
 
@@ -211,10 +234,10 @@
         & .mon-accomplissement {
             gap: 10px;
             & .hr {
-            font-size: 24px;
-            font-weight: 700;        
+                font-size: 24px;
+                font-weight: 700;
             }
-            & p{
+            & p {
                 text-align: center;
                 font-size: 14px;
             }

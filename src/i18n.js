@@ -92,7 +92,10 @@ const resources = {
         "recent": "work!",
         "practical": "projects!",
         "old": "production!",
-        "personal": "portfolio!"
+        "personal": "portfolio!",
+        "parcours_title": "My college journey!",
+        "présentement": "currently",
+        "timeline": "click to observe the timeline!"
       }
     },
     fr: {
@@ -185,7 +188,10 @@ const resources = {
         "recent": "récent!",
         "practical": "pratique!",
         "old": "ancien!",
-        "personal": "personnel!"
+        "personal": "personnel!",
+        "parcours_title": "Mon parcours collégial!",
+        "présentement": "présentement",
+        "timeline": "cliquez pour observer la chronologie !"
       }
     }
   };
