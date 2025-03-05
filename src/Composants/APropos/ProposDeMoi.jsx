@@ -12,12 +12,12 @@ import Scss from "../Notions/Scss";
 import Wp from "../Notions/Wp";
 import Unity from "../Notions/Unity";
 import Adobe from "../Notions/Adobe";
-import Parcours from "../Parcours/Parcours";  // Importation du composant Parcours
+import Parcours from "../Parcours/Parcours";  
 
 function ProposDeMoi() {
     const { t } = useTranslation(); 
     const [competenceActive, setCompetenceActive] = useState(null);
-    const [isParcoursVisible, setIsParcoursVisible] = useState(false); // Nouvel état pour gérer l'affichage de Parcours
+    const [isParcoursVisible, setIsParcoursVisible] = useState(false);
 
     useEffect(() => {
         function faireApparaitre() {
@@ -52,12 +52,12 @@ function ProposDeMoi() {
     };
 
     const handleAccomplissementClick = () => {
-        setIsParcoursVisible(true); // Affiche le composant Parcours lorsque l'on clique sur accomplissement
+        setIsParcoursVisible(true); 
     };
 
     return (
         <div className="AProposDeMoi">
-            {isParcoursVisible ? (  // Affiche Parcours si isParcoursVisible est true
+            {isParcoursVisible ? (  
                 <Parcours />
             ) : (
                 <>
@@ -123,7 +123,6 @@ function ProposDeMoi() {
                             </div>
                         </div>
                     </div>
-                    {/* Conserver le div pour les détails des compétences */}
                     <div className={`competence-detail ${competenceActive === "Figma" ? "showCompetenceFigma" :
                         competenceActive === "HtmlCss" ? "showCompetenceHtmlCss" :
                         competenceActive === "ReactJs" ? "showCompetenceReactJs" :

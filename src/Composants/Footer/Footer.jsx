@@ -1,10 +1,10 @@
 import React from "react";
-import { useTranslation } from "react-i18next"; // Importation du hook de traduction
+import { useTranslation } from "react-i18next"; 
 import './Footer.scss';
 import user_icon from '../../assets/user.svg';
 
 function Footer() {
-    const { t } = useTranslation(); // Utilisation de la traduction
+    const { t } = useTranslation();
 
     return (
         <div className="footer">

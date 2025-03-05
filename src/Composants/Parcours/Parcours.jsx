@@ -4,7 +4,7 @@ import './Parcours.scss';
 
 function Parcours() {
     const [active, setActive] = useState(false);
-    const [showText, setShowText] = useState(false); // Ajout du texte après 10s
+    const [showText, setShowText] = useState(false); 
     const { t } = useTranslation();
     const years = [2022, 2023, 2024, 2025, 2026, 2027];
     const currentYear = 2025;
@@ -12,7 +12,6 @@ function Parcours() {
     useEffect(() => {
         setActive(true);
 
-        // Affichage du texte après 10s
         const timer = setTimeout(() => {
             setShowText(true);
         }, 10000);
