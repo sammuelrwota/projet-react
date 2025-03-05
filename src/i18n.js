@@ -46,7 +46,6 @@ const resources = {
         "adobe": "Adobe",
         "hover_to_see": "Hover over the elements below.",
         "years_of_experience": "Years of experience in college!",
-        "recent_work": "My Recent Work",
         "see_more": "See More",
         "contact_title": "Contact Me",
         "communicate": "Let's communicate",
@@ -91,7 +90,12 @@ const resources = {
         "wp_paragraph": "With my teacher Eddy Martin, I am learning to use WordPress to create and manage dynamic websites. I develop custom themes, program plugins, and integrate databases to manage content. This experience allows me to master the technical aspects of WordPress and create interactive and high-performing websites.",
         "page404_title": "404 - Page Not Found",
         "page404_message": "Sorry, this page doesn't exist or has been moved.",
-        "page404_return_link": "Back to home"
+        "page404_return_link": "Back to home",
+        "animation_title": "My recent",
+        "recent": "work!",
+        "practical": "projects!",
+        "old": "production!",
+        "personal": "portfolio!"
       }
     },
     fr: {
@@ -138,7 +142,6 @@ const resources = {
         "adobe": "Adobe",
         "hover_to_see": "Survolez les éléments ci-dessous.",
         "years_of_experience": "Années d'expérience au cégep!",
-        "recent_work": "Mon travail récent",
         "see_more": "Voir Plus",
         "contact_title": "Entrer en contact",
         "communicate": "Communicons",
@@ -183,7 +186,12 @@ const resources = {
         "wp_paragraph": "Avec mon enseignant Eddy Martin, j'apprends à utiliser WordPress pour créer et gérer des sites web dynamiques. Je développe des thèmes personnalisés, programme des extensions et intègre des bases de données pour gérer le contenu. Cette expérience me permet de maîtriser les aspects techniques de WordPress et de créer des sites interactifs et performants.",
         "page404_title": "404 - Page non trouvée",
         "page404_message": "Désolé, cette page n'existe pas ou a été déplacée.",
-        "page404_return_link": "Retour à l'accueil"
+        "page404_return_link": "Retour à l'accueil",
+              "animation_title": "Mon travail",
+      "recent": "récent!",
+      "practical": "pratique!",
+      "old": "ancien!",
+      "personal": "personnel!"
       }
     }
   };

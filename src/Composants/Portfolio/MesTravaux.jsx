@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './MesTravaux.scss';
 import mestravauxData from '../../data/mestravaux.js'; 
 import fleche_droite from '../../assets/fleche-droite.svg';
+import Animations from '../Animations/Animations'; 
 
 function MesTravaux() {
     const { t } = useTranslation(); 
@@ -24,7 +25,7 @@ function MesTravaux() {
     return (
         <div className="mestravaux">
             <div className="mestravaux-titre">
-                <h1>{t('recent_work')}</h1>
+                <h1><Animations /></h1>
             </div>
             <div className="mestravaux-contenu">
                 {mesTravauxData.map((travail, index) => (
@@ -40,7 +41,7 @@ function MesTravaux() {
             </div>
             <div className="montravail-montreplus">
                 <a href="https://www.behance.net/profilsammuel" target="_blank" rel="noopener noreferrer">
-                    <p>{t('see_more')}</p> 
+                    <p>{t('see_more')}</p>
                     <img 
                         src={fleche_droite} 
                         alt="Fleche Droite" 
