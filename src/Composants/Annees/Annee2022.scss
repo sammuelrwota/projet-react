@@ -19,7 +19,6 @@
     img {
         width: 25px;
         height: 25px;
-        
     }
 }
 
@@ -27,7 +26,7 @@
     text-align: center;
     margin-bottom: 20px;
     h1 {
-        font-size : 50px;
+        font-size: 50px;
         margin-bottom: 50px;
     }
 }
@@ -37,7 +36,6 @@
     gap: 20px;
     width: 1000px;
     height: 1000px;
-
     background: #f8f8f8;
     padding: 20px;
     border-radius: 10px;
@@ -45,7 +43,6 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
 }
-
 
 .cahier::before {
     content: "";
@@ -76,16 +73,16 @@
     h2, p {
         color: black;
     }
+
     .remarqueParagraphe,
     .jaiApprisParagraphe {
-
         margin: 20px 20px 20px !important;
         font-size: 18px;
         text-align: left;
-        line-height: 35px !important;
+        line-height: 28px;
+        max-width: 500px;
     }
 }
-
 
 .left-page {
     border-right: 2px solid rgba(0, 0, 0, 0.2);
@@ -97,16 +94,66 @@
 }
 
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+
+
+
+
+    .annee-title {
+        text-align: center;
+        margin-bottom: 10px;
+
+
+
+
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+    }
+
     .cahier {
-        flex-direction: column;
+        gap: 10px;  /* Réduit l'écart entre les pages */
+        width: 500px !important;  /* Fixe la largeur à 500px */
+        height: 1900px !important;  /* Ajuste la hauteur selon le contenu */
+        flex-direction: column;  /* Affichage en colonne pour s'adapter aux petits écrans */
+        background: #f8f8f8;
+        padding: 10px;
+        border-radius: 10px;
+        border: 4px solid black;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
     }
 
     .cahier::before {
-        display: none;
+        display: none;  /* Supprime la ligne verticale de séparation */
     }
 
     .right-page {
-        text-align: left;
+        text-align: left;  /* Aligne le texte de la page droite à gauche sur petit écran */
+    }
+
+    .page {
+        flex: 1;
+        padding: 5px;  /* Réduit l'espacement interne */
+        background: white;
+        border-radius: 10px;
+        border: 0.5px solid black;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    
+        h2 {
+            text-align: left;
+        }
+    
+        h2 {
+            font-size: 28px;
+        }
+    
+        h2, p {
+            color: black;
+        }
+    
+
     }
 }

@@ -202,8 +202,9 @@
         align-items: start;
     }
     .AProposDeMoi-titre h1 {
-        font-size: 30px;
-        padding: 0;
+        padding: 1px 1px !important; 
+        font-size: 45px !important;
+        font-weight: 1000 !important;
     }
     .sections-AProposDeMoi {
         flex-direction: column;

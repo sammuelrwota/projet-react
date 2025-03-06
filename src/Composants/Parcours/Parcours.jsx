@@ -33,7 +33,6 @@ function Parcours({ onBack = () => console.log("onBack non défini") }) {
         setSelectedYear(null); 
     };
 
-    
     if (selectedYear) {
         switch (selectedYear) {
             case 2022: return <Annee2022 onBack={handleBackToParcours} />;
