@@ -96,3 +96,19 @@ button {
     background-color: #a7c7d3; 
   }
 }
+
+
+.close-button {
+  position: absolute;
+  top: -20px;
+  left: 410px;
+  background: none;
+  width: auto;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

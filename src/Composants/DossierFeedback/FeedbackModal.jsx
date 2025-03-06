@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next'; 
+import CloseIcon from '@mui/icons-material/Close';
 import './FeedbackModal.scss';
+import IconButton from '@mui/material/IconButton';
 
 function Feedback({ isOpen, closeModal }) {
   const { t } = useTranslation(); 
@@ -17,6 +19,12 @@ function Feedback({ isOpen, closeModal }) {
   return (
     <div className="feedback-modal-overlay" onClick={closeModal}>
       <div className="feedback-modal" onClick={(e) => e.stopPropagation()}>
+        
+        {/* Bouton de fermeture */}
+        <IconButton className="close-button" onClick={closeModal}>
+          <CloseIcon />
+        </IconButton>
+
         <h2>{t('leave_review')}</h2>
         <form onSubmit={handleSubmit}>
           <div className="rating">
@@ -28,7 +36,6 @@ function Feedback({ isOpen, closeModal }) {
                 >
                   ★
                 </span>
-
                 {rating === star && (
                   <span className="rating-label">{t(`rating_${star}`)}</span>
                 )}

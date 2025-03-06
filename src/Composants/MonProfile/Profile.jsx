@@ -4,6 +4,8 @@ import "./Profile.scss";
 import timlogo from "../../assets/tim.png";
 import Maisonneuvelogo from "../../assets/logo-maisonneuve.jpg";
 import Feedback from "../DossierFeedback/FeedbackModal";
+import CloseIcon from '@mui/icons-material/Close';
+
 
 function Profile({ setActivePage }) {
   const { t } = useTranslation();
