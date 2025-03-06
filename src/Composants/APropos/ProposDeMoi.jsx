@@ -58,7 +58,7 @@ function ProposDeMoi() {
     return (
         <div className="AProposDeMoi">
             {isParcoursVisible ? (  
-                <Parcours />
+                <Parcours onBack={() => setIsParcoursVisible(false)} />
             ) : (
                 <>
                     <div className="AProposDeMoi-titre">
@@ -148,7 +148,7 @@ function ProposDeMoi() {
                     </div>
 
                     <div className="accomplissements">
-                        <div className="mon-accomplissement" onClick={handleAccomplissementClick} title={t('timeline')}>
+                        <div className="mon-accomplissement" onClick={() => setIsParcoursVisible(true)} title={t('timeline')}>
                             <h1>2+</h1>
                             <p>{t('years_of_experience')}</p>
                         </div>

@@ -7,20 +7,22 @@ import menuicon from '../../assets/menuicon.png';
 import menuiconclose from '../../assets/menuicon-close.png';
 import reacticon from '../../assets/react-icon.png'; 
 import { ThemeContext } from '../ChangementDeTheme/ThemeContext.jsx';
+import { useNavigate } from 'react-router-dom'; // Importer useNavigate
 
-function BarreNav({ setActivePage }) {
+function BarreNav() {
     const menuRef = useRef();
     const { t } = useTranslation(); 
     const { theme, toggleTheme } = useContext(ThemeContext);
     const [showTooltip, setShowTooltip] = useState(false);
+    const navigate = useNavigate(); // Utilisation de useNavigate pour la navigation
 
     const openMenu = () => {
         menuRef.current.style.right = "0";
-    }
+    };
 
     const closeMenu = () => {
         menuRef.current.style.right = "-350px";
-    }
+    };
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
@@ -33,7 +35,7 @@ function BarreNav({ setActivePage }) {
                 src={monlogo}
                 alt="Mon Logo"
                 style={{ width: "100px", height: "100px", cursor: "pointer" }}
-                onClick={() => setActivePage('profile')}
+                onClick={() => navigate('/')}  // Navigue vers la page d'accueil
             />
             <img
                 src={menuicon}
@@ -49,10 +51,10 @@ function BarreNav({ setActivePage }) {
                     className="nav-close"
                     style={{ width: "50px", height: "50px" }}
                 />
-                <li onClick={() => setActivePage('profile')}>{t('home')}</li>
-                <li onClick={() => setActivePage('about')}>{t('about_me')}</li>
-                <li onClick={() => setActivePage('portfolio')}>{t('portfolio')}</li>
-                <li onClick={() => setActivePage('contact')}>{t('contact')}</li>
+                <li onClick={() => navigate('/')}>{t('home')}</li> {/* Navigue vers l'accueil */}
+                <li onClick={() => navigate('/about')}>{t('about_me')}</li> {/* Navigue vers ProposDeMoi */}
+                <li onClick={() => navigate('/portfolio')}>{t('portfolio')}</li>
+                <li onClick={() => navigate('/contact')}>{t('contact')}</li>
             </ul>
 
             <div className="language-switcher">
@@ -84,7 +86,7 @@ function BarreNav({ setActivePage }) {
                 {theme === 'light' ? '🌙 ' + t('dark_theme') : '☀️ ' + t('light_theme')}
             </div>
 
-            <div className="connect" onClick={() => setActivePage('connecte')}>
+            <div className="connect" onClick={() => navigate('/connecte')}>
                 {t('connect_with_me')}
             </div>
         </div>
