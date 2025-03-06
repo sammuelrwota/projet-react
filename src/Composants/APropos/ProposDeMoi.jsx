@@ -13,6 +13,7 @@ import Wp from "../Notions/Wp";
 import Unity from "../Notions/Unity";
 import Adobe from "../Notions/Adobe";
 import Parcours from "../Parcours/Parcours";  
+import CloseIcon from '@mui/icons-material/Close';
 
 function ProposDeMoi() {
     const { t } = useTranslation(); 
@@ -123,17 +124,12 @@ function ProposDeMoi() {
                             </div>
                         </div>
                     </div>
-                    <div className={`competence-detail ${competenceActive === "Figma" ? "showCompetenceFigma" :
-                        competenceActive === "HtmlCss" ? "showCompetenceHtmlCss" :
-                        competenceActive === "ReactJs" ? "showCompetenceReactJs" :
-                        competenceActive === "Javascript" ? "showCompetenceJavascript" :
-                        competenceActive === "Scss" ? "showCompetenceScss" :
-                        competenceActive === "Php" ? "showCompetencePhp" :
-                        competenceActive === "Maya" ? "showCompetenceMaya" :
-                        competenceActive === "Github" ? "showCompetenceGithub" :
-                        competenceActive === "Unity" ? "showCompetenceUnity" :
-                        competenceActive === "Adobe" ? "showCompetenceAdobe" :
-                        competenceActive === "Wp" ? "showCompetenceWp" : ""}`}>
+                    <div className={`competence-detail ${competenceActive ? "showCompetence" : ""}`}>
+                        {competenceActive && (
+                            <button className="close-button" onClick={() => setCompetenceActive(null)}>
+                                <CloseIcon />
+                            </button>
+                        )}
                         {competenceActive === "Figma" && <Figma />}
                         {competenceActive === "HtmlCss" && <HtmlCss />}
                         {competenceActive === "ReactJs" && <ReactJs />}
@@ -146,7 +142,6 @@ function ProposDeMoi() {
                         {competenceActive === "Unity" && <Unity />}
                         {competenceActive === "Adobe" && <Adobe />}
                     </div>
-
                     <div className="accomplissements">
                         <div className="mon-accomplissement" onClick={() => setIsParcoursVisible(true)} title={t('timeline')}>
                             <h1>2+</h1>

@@ -178,21 +178,27 @@
         transition: opacity 2s ease, transform 2s ease;
     }
 
-    .showCompetenceFigma,
-    .showCompetenceHtmlCss,
-    .showCompetenceReactJs,
-    .showCompetenceJavascript,
-    .showCompetenceScss,
-    .showCompetencePhp,
-    .showCompetenceMaya,
-    .showCompetenceGithub,
-    .showCompetenceWp,
-    .showCompetenceUnity,
-    .showCompetenceAdobe {
+.showCompetence{
         transform: translate(-50%, -50%) translateY(-325px) translateX(200px);
         z-index: 1;
         transition: transform 0.5s ease, z-index 0s;
     }
+
+    .close-button {
+        position: absolute;
+        left: 215px;
+        bottom: 190px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 50px;
+        color: #000000;
+    
+        &:hover {
+            color: rgb(55, 0, 255);
+        }
+    }
+    
 }
 
 @media(max-width:768px) {
@@ -209,7 +215,8 @@
     .sections-AProposDeMoi {
         flex-direction: column;
     }
-    .APropos-gauche {
+    .APropos-gauche,
+    .close-button{
         display: none;
     }
     .APropos-paragraphe {
