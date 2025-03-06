@@ -1,6 +1,6 @@
 import './Appli.scss';
 import React from 'react';
-import { Routes, Route } from 'react-router-dom'; // Pas besoin de BrowserRouter ici, juste Routes et Route
+import { Routes, Route } from 'react-router-dom'; 
 import BarreNav from './Composants/BarreDeNavigation/BarreNav.jsx';
 import Profile from './Composants/MonProfile/Profile.jsx';
 import ProposDeMoi from './Composants/APropos/ProposDeMoi.jsx';

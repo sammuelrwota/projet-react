@@ -90,12 +90,23 @@
 
 @media(max-width: 768px) {
     .footer {
-        margin: 40px 1px;
+        margin: 10px 1px !important;
     }
 
     .footer-top {
         flex-direction: column;
+
+        .footer-top-gauche p {
+
+            margin-top: 10px;
+
+        }
     }
+
+    .footer .footer-top .footer-top-gauche,
+    .footer .footer-top .footer-top-droite {
+        margin: 20px;
+     }
 
     .footer-bottom {
         flex-direction: column;
@@ -111,10 +122,9 @@
 
         .bottom-droite {
             flex-direction: column;
-            gap: 0px;
+            gap: 0px !important;
             align-items: center;
             width: 100%; 
-            padding: 0 20px; 
         }
     }
 }
