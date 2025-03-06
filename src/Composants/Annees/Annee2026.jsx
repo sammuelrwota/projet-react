@@ -25,7 +25,7 @@ function Annee2026({ onBack }) {
                 <div className="page left-page">
                     <h2>{t('remark')}</h2>
                     <p className="remarqueParagraphe2026">
-                       (vide)
+                       {t('empty')}
                     </p>
                 </div>
 
@@ -33,7 +33,7 @@ function Annee2026({ onBack }) {
                 <div className="page right-page">
                     <h2>{t('what_i_learned')}</h2>
                     <p className="jaiApprisParagraphe2026">
-                        (vide)
+                        {t('empty')}
                     </p>
                 </div>
             </div>
