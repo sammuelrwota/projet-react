@@ -14,6 +14,8 @@ import Unity from "../Notions/Unity";
 import Adobe from "../Notions/Adobe";
 import Parcours from "../Parcours/Parcours";  
 import CloseIcon from '@mui/icons-material/Close';
+import IconButton from '@mui/material/IconButton';
+import { Icon } from "@mui/material";
 
 function ProposDeMoi() {
     const { t } = useTranslation(); 
@@ -126,9 +128,9 @@ function ProposDeMoi() {
                     </div>
                     <div className={`competence-detail ${competenceActive ? "showCompetence" : ""}`}>
                         {competenceActive && (
-                            <button className="close-button" onClick={() => setCompetenceActive(null)}>
+                            <IconButton className="close-button" onClick={() => setCompetenceActive(null)}>
                                 <CloseIcon />
-                            </button>
+                            </IconButton>
                         )}
                         {competenceActive === "Figma" && <Figma />}
                         {competenceActive === "HtmlCss" && <HtmlCss />}

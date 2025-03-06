@@ -186,13 +186,17 @@
 
     .close-button {
         position: absolute;
+        top: -240px;
         left: 215px;
-        bottom: 190px;
         background: none;
+        width: auto;
         border: none;
         cursor: pointer;
-        font-size: 50px;
+        font-size: 24px;
         color: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     
         &:hover {
             color: rgb(55, 0, 255);

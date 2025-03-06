@@ -11,17 +11,23 @@ function Feedback({ isOpen, closeModal }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    closeModal();
+    handleClose(); 
+  };
+
+  const handleClose = () => {
+    setRating(0);    
+    setComment('');   
+    closeModal();      
   };
 
   if (!isOpen) return null; 
 
   return (
-    <div className="feedback-modal-overlay" onClick={closeModal}>
+    <div className="feedback-modal-overlay" onClick={handleClose}>
       <div className="feedback-modal" onClick={(e) => e.stopPropagation()}>
-        
-        {/* Bouton de fermeture */}
-        <IconButton className="close-button" onClick={closeModal}>
+
+        {/* Close Button */}
+        <IconButton className="close-button" onClick={handleClose}>
           <CloseIcon />
         </IconButton>
 
