@@ -14,7 +14,7 @@ function Appli() {
   return (
     <div>
       <DefilementVersLeHaut />
-      <BarreNav /> {/* Barre de navigation */}
+      <BarreNav /> 
       <Routes>
         <Route path="/" element={<Profile />} />
         <Route path="/about" element={<ProposDeMoi />} />
