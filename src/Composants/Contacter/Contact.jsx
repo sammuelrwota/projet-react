@@ -40,7 +40,7 @@ function Contact() {
 
         setTimeout(() => {
             setShowNotification(true);
-        }, 1000); 
+        }, 100); 
     };
 
     return( 
