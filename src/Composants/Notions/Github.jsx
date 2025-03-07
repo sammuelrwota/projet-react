@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next'; 
 import './Github.scss';
 
 function Github() {
     const { t } = useTranslation(); 
+
+    useEffect(() => {
+        window.scrollTo(0, 400); 
+    }, []);
+
+
 
     return(
         <div className='CompetenceGithub'>

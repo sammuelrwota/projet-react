@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next'; 
 import './Adobe.scss';
-import ProposDeMoi from '../APropos/ProposDeMoi';
 
 function Adobe() {
     const { t } = useTranslation(); 
+
+    useEffect(() => {
+        window.scrollTo(0, 400); 
+    }, []);
+
 
     return(
         <div className='CompetenceAdobe'>
@@ -15,7 +19,7 @@ function Adobe() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Adobe;

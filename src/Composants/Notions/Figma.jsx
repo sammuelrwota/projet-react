@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Figma.scss';
 
 function Figma() {
     const { t } = useTranslation(); 
+
+    useEffect(() => {
+        window.scrollTo(0, 400); 
+    }, []);
+
+
 
     return(
         <div className='CompetenceFigma'>
