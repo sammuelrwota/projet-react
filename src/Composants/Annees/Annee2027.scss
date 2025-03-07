@@ -31,12 +31,12 @@
     }
 }
 
-.cahier {
+.cahier2027 {
     display: flex;
     gap: 20px;
     width: 1000px;
-    height: 1000px;
-    background: #909090;
+    height: 300px;
+    background: #ffffff;
     padding: 20px;
     border-radius: 10px;
     border: 4px solid black;
@@ -44,7 +44,7 @@
     position: relative;
 }
 
-.cahier::before {
+.cahier2027::before {
     content: "";
     position: absolute;
     top: 0;
@@ -95,10 +95,10 @@
         }
     }
 
-    .cahier {
+    .cahier2027 {
         gap: 10px;  
         width: 500px !important;  
-        height: 1900px !important;  
+        height: 700px !important;  
         flex-direction: column;  
         padding: 10px;
         border-radius: 10px;
@@ -107,7 +107,7 @@
         position: relative;
     }
 
-    .cahier::before {
+    .cahier2027::before {
         display: none;  
     }
 

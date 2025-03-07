@@ -21,7 +21,7 @@ function Annee2027({ onBack }) {
                 <h1>2027</h1>
             </div>
 
-            <div className="cahier">
+            <div className="cahier2027">
                 <div className="page left-page">
                     <h2>{t('remark')}</h2>
                     <p className="remarqueParagraphe2027">
