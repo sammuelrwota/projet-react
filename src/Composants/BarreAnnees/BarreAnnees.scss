@@ -1,0 +1,49 @@
+$year-cube-width: 200px;
+$year-cube-height: 50px;
+$year-cube-margin: 0 10px;
+$box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+
+.conteneur-barre-annees {
+    position: relative;
+    min-height: 20vh;
+    min-width: 30vw;
+}
+
+.barre-annees {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    box-shadow: $box-shadow;
+    z-index: 1000;
+}
+
+.year-cube {
+    width: $year-cube-width;
+    height: $year-cube-height;
+    margin: $year-cube-margin;
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+    line-height: $year-cube-height;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+@media screen and (max-width:768px) {
+
+    .conteneur-barre-annees {
+        position: relative;
+        min-height: 20vh;
+        min-width: 60vw !important;
+    }
+
+}

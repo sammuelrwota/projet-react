@@ -2,13 +2,14 @@ import React, { useEffect } from 'react';
 import './Annee2026.scss';
 import FaArrowLeft from '../../assets/leftarrow.svg'; 
 import { useTranslation } from 'react-i18next';
+import BarreAnnees from '../BarreAnnees/BarreAnnees'; 
 
-function Annee2026({ onBack }) {
+function Annee2026({ onBack, onYearClick }) {
 
     const { t } = useTranslation();
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0); 
     }, []);
 
     return (
@@ -25,10 +26,9 @@ function Annee2026({ onBack }) {
                 <div className="page left-page">
                     <h2>{t('remark')}</h2>
                     <p className="remarqueParagraphe2026">
-                       {t('empty')}
+                        {t('empty')}
                     </p>
                 </div>
-
 
                 <div className="page right-page">
                     <h2>{t('what_i_learned')}</h2>
@@ -37,6 +37,8 @@ function Annee2026({ onBack }) {
                     </p>
                 </div>
             </div>
+
+            <BarreAnnees onYearClick={onYearClick} />
         </div>
     );
 }

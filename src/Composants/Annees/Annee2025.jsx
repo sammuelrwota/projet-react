@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import './Annee2025.scss';
 import FaArrowLeft from '../../assets/leftarrow.svg'; 
 import { useTranslation } from 'react-i18next';
+import BarreAnnees from '../BarreAnnees/BarreAnnees';
 
-function Annee2025({ onBack }) {
+function Annee2025({ onBack, onYearClick }) {
 
     const { t } = useTranslation();
 
@@ -25,17 +26,19 @@ function Annee2025({ onBack }) {
                 <div className="page left-page">
                     <h2>{t('remark')}</h2>
                     <p className="remarqueParagraphe">
-                         {t('remarkp2025')}
+                        {t('remarkp2025')}
                     </p>
                 </div>
 
                 <div className="page right-page">
                     <h2>{t('what_i_learned')}</h2>
                     <p className="jaiApprisParagraphe">
-                    {t('what_i_learned2025')}
+                        {t('what_i_learned2025')}
                     </p>
                 </div>
             </div>
+
+            <BarreAnnees onYearClick={onYearClick} /> 
         </div>
     );
 }
