@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next"; 
+import { useNavigate } from 'react-router-dom';  
 import "./Profile.scss";
 import timlogo from "../../assets/tim.png";
 import Maisonneuvelogo from "../../assets/logo-maisonneuve.jpg";
 import Feedback from "../DossierFeedback/FeedbackModal";
 
-
-function Profile({ setActivePage }) {
+function Profile() {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -24,6 +25,10 @@ function Profile({ setActivePage }) {
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+  };
+
+  const handleConnecteClick = () => {
+    navigate("/connecte");
   };
 
   return (
@@ -74,7 +79,7 @@ function Profile({ setActivePage }) {
       <p>{t('internship_search')}</p>
 
       <div className="cv">
-        <div className="connecte-avec-moi" onClick={() => setActivePage("connecte")}>
+        <div className="connecte-avec-moi" onClick={handleConnecteClick}>
           {t('connect_with_me')}
         </div>
         <div className="moncv" onClick={handleCVClick}>

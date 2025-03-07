@@ -7,7 +7,7 @@ import ProposDeMoi from './Composants/APropos/ProposDeMoi.jsx';
 import MesTravaux from './Composants/Portfolio/MesTravaux.jsx';
 import Contact from './Composants/Contacter/Contact.jsx';
 import Footer from './Composants/Footer/Footer.jsx';
-import ConnecteAvecMoi from './Composants/ConnecteAvecMoi/ConnecteAvecMoi.jsx';
+import ConnecteAvecMoi from './Composants/ConnecteAvecMoi/ConnecteAvecMoi.jsx'; 
 import DefilementVersLeHaut from './Composants/Defilement/DefilementVersLeHaut.jsx';
 
 function Appli() {
@@ -20,7 +20,7 @@ function Appli() {
         <Route path="/about" element={<ProposDeMoi />} />
         <Route path="/portfolio" element={<MesTravaux />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/connecte" element={<ConnecteAvecMoi />} />
+        <Route path="/connecte" element={<ConnecteAvecMoi />} /> 
       </Routes>
       <Footer />
     </div>
