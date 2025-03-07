@@ -38,8 +38,7 @@ function Annee2022({ onBack, onYearClick }) {
                 </div>
             </div>
 
-            {/* Barre des années en bas */}
-            <BarreAnnees onYearClick={onYearClick} /> {/* Passe le callback pour changer d'année */}
+            <BarreAnnees onYearClick={onYearClick} /> 
         </div>
     );
 }

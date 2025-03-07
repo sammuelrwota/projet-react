@@ -1,5 +1,5 @@
 import React from 'react';
-import './BarreAnnees.scss'; // Import du fichier CSS
+import './BarreAnnees.scss';
 
 function BarreAnnees({ onYearClick }) {
     return (

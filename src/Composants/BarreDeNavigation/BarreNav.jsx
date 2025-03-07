@@ -7,14 +7,13 @@ import menuicon from '../../assets/menuicon.png';
 import menuiconclose from '../../assets/menuicon-close.png';
 import reacticon from '../../assets/react-icon.png'; 
 import { ThemeContext } from '../ChangementDeTheme/ThemeContext.jsx';
-import { useNavigate } from 'react-router-dom'; // Importer useNavigate
-
+import { useNavigate } from 'react-router-dom'; 
 function BarreNav() {
     const menuRef = useRef();
     const { t } = useTranslation(); 
     const { theme, toggleTheme } = useContext(ThemeContext);
     const [showTooltip, setShowTooltip] = useState(false);
-    const navigate = useNavigate(); // Utilisation de useNavigate pour la navigation
+    const navigate = useNavigate(); 
 
     const openMenu = () => {
         menuRef.current.style.right = "0";
@@ -35,7 +34,7 @@ function BarreNav() {
                 src={monlogo}
                 alt="Mon Logo"
                 style={{ width: "100px", height: "100px", cursor: "pointer" }}
-                onClick={() => navigate('/')}  // Navigue vers la page d'accueil
+                onClick={() => navigate('/')}  
             />
             <img
                 src={menuicon}
@@ -51,8 +50,8 @@ function BarreNav() {
                     className="nav-close"
                     style={{ width: "50px", height: "50px" }}
                 />
-                <li onClick={() => navigate('/')}>{t('home')}</li> {/* Navigue vers l'accueil */}
-                <li onClick={() => navigate('/about')}>{t('about_me')}</li> {/* Navigue vers ProposDeMoi */}
+                <li onClick={() => navigate('/')}>{t('home')}</li> 
+                <li onClick={() => navigate('/about')}>{t('about_me')}</li> 
                 <li onClick={() => navigate('/portfolio')}>{t('portfolio')}</li>
                 <li onClick={() => navigate('/contact')}>{t('contact')}</li>
             </ul>

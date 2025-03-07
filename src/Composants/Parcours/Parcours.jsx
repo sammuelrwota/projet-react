@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next'; // Assure-toi d'importer useTranslation
+import { useTranslation } from 'react-i18next'; 
 import './Parcours.scss';
 import Annee2022 from '../Annees/Annee2022';
 import Annee2023 from '../Annees/Annee2023';
@@ -12,8 +12,8 @@ import FaArrowLeft from '../../assets/leftarrow.svg';
 function Parcours({ onBack = () => console.log("onBack non défini") }) {
     const [active, setActive] = useState(false);
     const [showText, setShowText] = useState(false);
-    const [selectedYear, setSelectedYear] = useState(null); // Pour gérer l'année sélectionnée
-    const { t } = useTranslation(); // Utilisation de useTranslation pour accéder à t
+    const [selectedYear, setSelectedYear] = useState(null);
+    const { t } = useTranslation(); 
     const currentYear = 2025;
 
     useEffect(() => {
@@ -29,7 +29,7 @@ function Parcours({ onBack = () => console.log("onBack non défini") }) {
     };
 
     const handleBackToParcours = () => {
-        setSelectedYear(null); // Réinitialiser l'année sélectionnée
+        setSelectedYear(null); 
     };
 
     if (selectedYear) {
@@ -40,7 +40,7 @@ function Parcours({ onBack = () => console.log("onBack non défini") }) {
             case 2025: return <Annee2025 onBack={handleBackToParcours} onYearClick={handleYearClick} />;
             case 2026: return <Annee2026 onBack={handleBackToParcours} onYearClick={handleYearClick} />;
             case 2027: return <Annee2027 onBack={handleBackToParcours} onYearClick={handleYearClick} />;
-            default: return <Parcours />; // Default in case of invalid year
+            default: return <Parcours />; 
         }
     }
 
@@ -65,7 +65,6 @@ function Parcours({ onBack = () => console.log("onBack non défini") }) {
             </div>
 
             <div className="parcours-timeline">
-                {/* Liste des années */}
                 {[2022, 2023, 2024, 2025, 2026, 2027].map((year) => (
                     <div 
                         key={year} 
