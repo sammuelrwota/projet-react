@@ -10,16 +10,16 @@ function MesTravaux() {
     const [mesTravauxData, setMesTravauxData] = useState(mestravauxData.mestravaux_data);
 
     const redirectToLink = (travail) => {
-        const links = {
+        const liens = {
+            0: "https://www.behance.net/gallery/221775599/Wordpress-Debut-Project-Wordpress-projet-initi",
             1: "https://www.behance.net/gallery/219427161/Projet-Maya-2024",
             2: "https://www.behance.net/gallery/219426973/Figma-Project-Akwaba-(Hiver-2024)",
             3: "https://www.behance.net/gallery/219425779/Projet-Album-des-finissants-Hiver-2024",
             4: "https://www.behance.net/gallery/219425241/Projet-2022",
             5: "https://www.behance.net/gallery/195519651/TP2B-Charge-vlo",
-            6: "https://www.behance.net/gallery/170167633/Mon-jeu-3D"
         };
 
-        window.location.href = links[travail.w_no]; 
+        window.location.href = liens[travail.w_no]; 
     };
 
     return (

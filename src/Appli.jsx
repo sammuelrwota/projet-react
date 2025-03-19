@@ -1,14 +1,14 @@
 import './Appli.scss';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom'; 
-import BarreNav from './BarreDeNavigation/BarreNav.jsx';
-import Profile from './MonProfile/Profile.jsx';
-import ProposDeMoi from './APropos/ProposDeMoi.jsx';
-import MesTravaux from './Portfolio/MesTravaux.jsx';
-import Contact from './Contacter/Contact.jsx';
-import Footer from './Footer/Footer.jsx';
-import ConnecteAvecMoi from './ConnecteAvecMoi/ConnecteAvecMoi.jsx'; 
-import DefilementVersLeHaut from './Defilement/DefilementVersLeHaut.jsx';
+import BarreNav from './Composants/BarreDeNavigation/BarreNav.jsx';
+import Profile from './Composants/MonProfile/Profile.jsx';
+import ProposDeMoi from './Composants/APropos/ProposDeMoi.jsx';
+import MesTravaux from './Composants/Portfolio/MesTravaux.jsx';
+import Contact from './Composants/Contacter/Contact.jsx';
+import Footer from './Composants/Footer/Footer.jsx';
+import ConnecteAvecMoi from './Composants/ConnecteAvecMoi/ConnecteAvecMoi.jsx'; 
+import DefilementVersLeHaut from './Composants/Defilement/DefilementVersLeHaut.jsx';
 
 function Appli() {
   return (

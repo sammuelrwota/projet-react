@@ -9,16 +9,17 @@ $font-size-medium: 22px;
   align-items: center;
   justify-content: center;
   gap: 80px;
-  margin: 80px 170px;
+  margin: 150px 170px;
 
   .mestravaux-titre {
     position: relative;
 
-    h1 {
-      padding: 0px 30px;
-      font-size: $font-size-large;
-      font-weight: 600;
-    }
+    // h1 {
+    //   padding: 0px 30px;
+    //   margin-bottom: 30px;
+    //   font-size: $font-size-large;
+    //   font-weight: 600;
+    // }
 
     img {
       position: absolute;
@@ -32,7 +33,7 @@ $font-size-medium: 22px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 175px;
     width: 100%;
 
     img {
